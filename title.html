@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"><!-- Устанавливает кодировку документа в UTF-8, поддерживает кириллицу -->
+  <title>Десятичные часы (старт с текущего времени)</title><!-- Заголовок вкладки браузера -->
+  <style>
+    /* Сбрасываем отступы у html/body, растягиваем фон на весь экран, центруем canvas */
+    html, body {
+      margin: 0;               /* Убираем внешние отступы */
+      padding: 0;              /* Убираем внутренние отступы */
+      width: 100%;             /* Ширина на все 100% окна */
+      height: 100%;            /* Высота на все 100% окна */
+      background: #f0f0f0;     /* Серый фон позади часов */
+      display: flex;           /* Флекс-контейнер для центрирования */
+      justify-content: center; /* Центрируем по горизонтали */
+      align-items: center;     /* Центрируем по вертикали */
+    }
+    /* Оформление самого <canvas> под часы */
+    canvas {
+      background: #fff;                    /* Белый фон циферблата */
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);/* Лёгкая тень вокруг */
+    }
+  </style>
+</head>
+<body>
+  <!-- Холст, на котором рисуем часы -->
+  <canvas id="clock" width="800" height="800"></canvas>
+
+  <script>
+    // Получаем элемент canvas и его 2D-контекст для рисования
+    const canvas = document.getElementById('clock');
+    const ctx    = canvas.getContext('2d');
+
+    // Вводим константы размеров
+    const W  = canvas.width;     // полная ширина холста (800 px)
+    const H  = canvas.height;    // полная высота холста (800 px)
+    const Cx = W / 2;            // X-координата центра (400 px)
+    const Cy = H / 2;            // Y-координата центра (400 px)
+    const R  = W / 2 * 0.9;      // радиус основного круга = 90% от половины ширины ≈ 360 px
+
+    /**
+     * Функция drawFace(): рисует статическую часть часов —
+     * круг, засечки и цифры от 0 до 9
+     */
+    function drawFace() {
+      // Очищаем предыдущий кадр целиком
+      ctx.clearRect(0, 0, W, H);
+
+      // 1) Рисуем основной большой круг циферблата
+      ctx.beginPath();                      // Начинаем новый путь
+      ctx.arc(Cx, Cy, R, 0, 2 * Math.PI);  // Окружность с центром (Cx,Cy) и радиусом R
+      ctx.fillStyle   = '#fff';            // Заливка белым цветом
+      ctx.fill();                          // Применяем заливку
+      ctx.lineWidth   = 12;                // Толщина обводки — 12 пикселей
+      ctx.strokeStyle = '#333';            // Цвет обводки — тёмно-серый
+      ctx.stroke();                        // Рисуем обводку
+
+      // 2) Рисуем 100 маленьких точек (секундные/десятичные засечки)
+      ctx.fillStyle = '#333';              // Цвет точек — тёмно‐серый
+      for (let i = 0; i < 100; i++) {
+        // Угол очередной точки: равномерно распределяем от 0 до 2π
+        const angle = i / 100 * 2 * Math.PI - Math.PI / 2;
+        // Расстояние от центра: чуть внутри радиуса (95% R)
+        const dist  = R * 0.95;
+        // Вычисляем координаты точки
+        const x = Cx + Math.cos(angle) * dist;
+        const y = Cy + Math.sin(angle) * dist;
+        ctx.beginPath();                   // Новый путь для точки
+        ctx.arc(x, y, 3, 0, 2 * Math.PI);  // Круг радиусом 3 px
+        ctx.fill();                        // Заливка этой точки
+      }
+
+      // 3) Рисуем 10 крупных меток и цифры 0…9
+      ctx.font         = `${R * 0.12}px sans-serif`; /* Размер шрифта ≈ 0.12·R (~43px) */
+      ctx.textAlign    = 'center';                    /* Выравниваем текст по центру по X */
+      ctx.textBaseline = 'middle';                    /* И по центру по Y */
+
+      for (let i = 0; i < 10; i++) {
+        // Угол для каждой крупной метки/цифры
+        const angle = i / 10 * 2 * Math.PI - Math.PI / 2;
+
+        // 3.1) Рисуем линию-метку
+        const x1 = Cx + Math.cos(angle) * R * 0.9;  // внутренняя точка метки (0.9·R)
+        const y1 = Cy + Math.sin(angle) * R * 0.9;
+        const x2 = Cx + Math.cos(angle) * R;        // внешняя точка метки (R)
+        const y2 = Cy + Math.sin(angle) * R;
+        ctx.beginPath();
+        ctx.moveTo(x1, y1);
+        ctx.lineTo(x2, y2);
+        ctx.lineWidth   = 6;                // толщина метки = 6px
+        ctx.strokeStyle = '#333';           // цвет метки
+        ctx.stroke();                       // рисуем линию
+
+        // 3.2) Рисуем цифру рядом с меткой
+        const tx = Cx + Math.cos(angle) * R * 0.78; // позиция цифры (78% R)
+        const ty = Cy + Math.sin(angle) * R * 0.78;
+        ctx.fillStyle = '#000';             // цвет текста — чёрный
+        ctx.fillText(i.toString(), tx, ty);// выводим цифру i
+      }
+    }
+
+    /**
+     * Функция drawHand(): рисует одну стрелку часов
+     * angle  — угол в радианах (0…2π), куда смотреть стрелке
+     * length — относительная длина от центра (доля от R)
+     * width  — толщина линии стрелки в пикселях
+     * color  — цвет стрелки
+     */
+    function drawHand(angle, length, width, color) {
+      // Подгоняем: 0 радиан будем считать «вверх», поэтому вычитаем π/2
+      const a = angle - Math.PI / 2;
+      // Вычисляем конечную точку стрелки:
+      // по X: Cx + cos(a) * R * length
+      // по Y: Cy + sin(a) * R * length
+      const x = Cx + Math.cos(a) * R * length;
+      const y = Cy + Math.sin(a) * R * length;
+
+      ctx.beginPath();            // Начинаем путь стрелки
+      ctx.moveTo(Cx, Cy);         // Стартуем из центра
+      ctx.lineTo(x, y);           // Линия к конечной точке
+      ctx.lineWidth   = width;    // Толщина стрелки
+      ctx.strokeStyle = color;    // Цвет стрелки
+      ctx.lineCap     = 'round';  // Закруглённый наконечник
+      ctx.stroke();               // Рисуем стрелку
+    }
+
+    /**
+     * Функция drawTime(): вычисляет текущий момент
+     * в «десятичной» системе времени и рисует стрелки
+     */
+    function drawTime() {
+      const now = new Date(); // Текущее местное время
+
+      // 1) Считаем общее число обычных секунд от начала суток:
+      //    часы·3600 + минуты·60 + секунды + миллисекунды/1000
+      const ordinarySec =
+        now.getHours() * 3600 +
+        now.getMinutes() * 60 +
+        now.getSeconds() +
+        now.getMilliseconds() / 1000;
+
+      // 2) Переводим «обычные» секунды в «десятичные»
+      //    по правилу: 86400 обычных = 100000 десятичных
+      const decTotalSec = ordinarySec * 100000 / 86400;
+      //    decTotalSec ∈ [0…100000) за полный день
+
+      // 3) Выделяем целые «десятичные» часы (0…9):
+      const h = Math.floor(decTotalSec / 10000);
+      //    1 десятичный час = 10000 десятичных секунд
+
+      // 4) Оставшиеся десятичные секунды после часов
+      //    превращаем в «десятичные» минуты (0…99):
+      const m = Math.floor((decTotalSec % 10000) / 100);
+      //    1 десятичная минута = 100 десятичных секунд
+
+      // 5) Оставшиеся десятичные секунды для секундной стрелки ∈ [0…100)
+      const s = decTotalSec % 100;
+
+      // 6) Пересчитываем часы/минуты/секунды в углы (в радианах)
+      // Углы считаем из доли полного круга (2π)
+      const angleH = (h + m / 100 + s / 10000) / 10 * 2 * Math.PI;
+      //  h + fraction_minutes + fraction_seconds  делим на 10 (часов в круге)
+      const angleM = (m + s / 100)      / 100 * 2 * Math.PI;
+      //  m + fraction_seconds  делим на 100 (минут в круге)
+      const angleS = s               / 100 * 2 * Math.PI;
+      //  s делим на 100 (секунд в круге)
+
+      // 7) Рисуем стрелки: часовая, минутная, секундная
+      drawHand(angleH, 0.4, 18, '#000');     // Часовая: 40% R, толщина 18px, чёрная
+      drawHand(angleM, 0.7, 10, '#007ACC');  // Минутная: 70% R, толщина 10px, синия
+      drawHand(angleS, 0.9, 6,  '#CC0000');  // Секундная: 90% R, толщина 6px, красная
+
+      // 8) Рисуем центральную чёрную точку
+      ctx.beginPath();
+      ctx.arc(Cx, Cy, 12, 0, 2 * Math.PI);  // Круг радиусом 12px
+      ctx.fillStyle = '#000';              // Цвет чёрный
+      ctx.fill();
+    }
+
+    /**
+     * Функция animate(): цикл анимации
+     * Перерисовывает «фон» и «стрелки» ~60 раз в секунду
+     */
+    function animate() {
+      drawFace();    // Фон и метки
+      drawTime();    // Стрелки по текущему времени
+      requestAnimationFrame(animate); // Планируем следующий кадр
+    }
+
+    // Запускаем анимацию при загрузке страницы
+    animate();
+  </script>
+</body>
+</html>
