@@ -39,7 +39,7 @@
     color: #1111ff;
   }
   a:hover {
-    color: #21218f;
+    color: #31218f;
   }
 
     /* Стили для <hr> */
@@ -55,6 +55,24 @@
       font-family: var(--fontStack-monospace);
       font-size: 18px;
       line-height: 1.4;
+    }
+    /* Короткий, адекватный селектор */
+    a.parts1 {
+      color: #1111ff;
+      font-size: 24px;
+      line-height: 1.2;
+    }
+    a.parts1:hover {
+      color: #31218f;
+    }
+    /* Короткий, адекватный селектор */
+    a.parts2 {
+      color: #001bdd;
+      font-size: 22px;
+      line-height: 1.2;
+    }
+    a.parts2:hover {
+      color: #881bdd;
     }
   </style>
 </head>
@@ -86,7 +104,10 @@
     <td style="padding-left: 10px; padding-top: 0;">
       <table align="left" border="0" cellpadding="0" cellspacing="0">
         <tr>
-          <td><a href="en_tenses.html" target="mainFrame">Времена</a></td>
+          <td><a class="parts1" href="en_tenses.html" target="mainFrame">Времена</a></td>
+        </tr>
+        <tr>
+          <td><a class="parts1" href="en_word_formation.html" target="mainFrame">Словообразование</a></td>
         </tr>
         <tr>
           <td><a href="en_articles.html" target="mainFrame">Артикли</a></td>

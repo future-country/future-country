@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Реформа английских времён</title>
+	<link href="pic/favicon.png" rel="shortcut icon" type="image/x-icon" />
+	<style>
+		:root {
+			--lh-base: 1.2;
+			--lh-list: 1.3;
+			--li-v-margin: 0.4em;
+			--nested-indent: 40px;
+			--fontStack-monospace:
+				Arial,
+				Helvetica,
+				sans-serif,
+				"Monaspace Neon",
+				ui-monospace,
+				SFMono-Regular,
+				"SF Mono",
+				Menlo,
+				Consolas,
+				"Liberation Mono",
+				monospace !important;
+		}
+
+		html, body {
+			font-family: var(--fontStack-monospace);
+		}
+
+		html {
+			font-size: 24px;
+		}
+
+		body {
+			padding-left: 20px;       /* задаёт отступ слева */
+			margin: 20px;
+			line-height: var(--lh-base);
+			font-size: 1rem;
+			position: relative;
+		}
+
+		#corner-link {
+			position: absolute;
+			top: 0px;
+			right: 20px;
+			font-size: 1rem;
+			text-decoration: none;
+			color: #5151ff;
+		}
+		#corner-link:hover  {
+			position: absolute;
+			top: 0px;
+			right: 20px;
+			font-size: 1rem;
+			text-decoration: none;
+			color: #5151ff;
+			text-decoration: underline; /* Добавлено подчеркивание при наведении */
+		}
+
+		h2 {
+			color: #000;
+			margin-top: 1.0em;
+			margin-bottom: 0.5em;
+			line-height: var(--lh-base);
+			font-size: 2.25rem;
+		}
+
+		h3 {
+			color: #2a5d84;
+			margin-top: 1.2em;
+			margin-bottom: 0.4em;
+			line-height: var(--lh-base);
+			font-size: 1.5rem;
+		}
+
+		p {
+			margin: 0.5em 0;
+			line-height: var(--lh-base);
+		}
+
+		ul {
+			margin: 0.5em 0 0.5em var(--nested-indent);
+			padding: 0 0 0 1em;
+			line-height: var(--lh-list);
+		}
+
+		ul ul {
+			margin: var(--li-v-margin) 0 var(--li-v-margin) var(--nested-indent);
+			padding: 0 0 0 1em;
+			line-height: var(--lh-list);
+		}
+
+		li {
+			margin: var(--li-v-margin) 0;
+		}
+
+		/* Стили для ссылок */
+		a {
+			text-decoration: none;
+			color: #3131cf;
+		}
+		a:hover {
+			color: #3131cf;
+			text-decoration: underline; /* Добавлено подчеркивание при наведении */
+		}
+
+		hr {
+			margin: 2em 0;
+			border: none;
+			border-top: 1px solid #ccc;
+		}
+
+		/* Новые стили для выравнивания «Трех базовых времен» */
+		.times-list {
+			list-style: none;
+			padding: 0;
+			margin-left: var(--nested-indent);
+		}
+		.times-list li {
+			display: flex;
+			margin: var(--li-v-margin) 0;
+		}
+		.times-list .term {
+			width: 350px; /* фиксированная ширина для левой колонки */
+			flex-shrink: 0;
+		}
+		.times-list .def {
+			flex: 1;
+		}
+	</style>
+</head>
+<body>
+
+	<a id="corner-link" href="../index.html" target="_top"><b>На главную</b></a>
+
+	<h2>Оглавление</h2>
+	<ul>
+		<b>
+		<li><a href="#chapter1">Что не так со словообразованием в английском языке?</a></li>
+		<li><a href="#chapter2">Образование существительных, глаголов, прилагательных, наречий, причастий...</a></li>
+		<li><a href="#chapter3">Другие суффиксы и префиксы.</a></li>
+		</b>
+	</ul>
+
+	<hr>
+
+	<h2 id="chapter1">В чём проблема?</h2>
+	<ul>
+		<big><b>Основная проблема</b></big> образования частей речи в английском языке заключается в полном отсутствии единой, предсказуемой и логичной системы. Вместо чётких правил - исторически сложившееся нагромождение исключений, где формирование новой части речи напоминает не применение формулы, а лотерею. Это заставляет запоминать каждое слово в отдельности, превращая изучение языка в титанический труд.
+	</ul>
+
+	<hr>
+
+	<h3>Образование глаголов: два взаимоисключающих пути</h3>
+	<div style="height:8px" aria-hidden="true"></div>
+	<ul>
+		<big><b>Проблема образования глаголов</b></big> - это квинтэссенция всего хаоса. Чтобы создать глагол от существительного или прилагательного, система предлагает два абсолютно разных и ничем не регламентированных метода.
+		<div style="height:22px" aria-hidden="true"></div>
+		<ul>
+			<li><big><b>Конверсия:</b></big> Слово меняет часть речи без морфологических изменений - к корню не добавляется никаких суффиксов. Его новая глагольная природа раскрывается исключительно через синтаксис: положение в предложении, наличие частицы to или вспомогательных глаголов. Несмотря на то что частица to является индикатором инфинитива, её внешнее сходство с предлогом to может в некоторых случаях приводить к неоднозначности.</li>
+			<ul>
+				<li><b>a bottle</b> (бутылка) - <b>to bottle</b> (разливать по бутылкам)</li>
+				<li><b>a email</b> (письмо) - <b>to email</b> (писать письмо)</li>
+				<li><b>an empty</b> box (пустая коробка) - <b>to empty</b> the box (опустошить коробку)</li>
+			</ul>
+			<div style="height:14px" aria-hidden="true"></div>
+			<li><big><b>Аффиксация - произвол выбора:</b></big> Если же суффикс всё-таки добавляется (например, <b>-ize, -ify, -ate, -en</b>), то выбор его абсолютно случаен и не подчиняется никакой логике. Поэтому каждое слово и его производную форму нужно запоминать отдельно.</li>
+			<ul>
+				<li><b>-ize:</b> to memorize, to categorize, to modernize</li>
+				<li><b>-ify:</b> to glorify, to simplify, to identify</li>
+				<li><b>-ate:</b> to activate, to create, to negotiate</li>
+				<li><b>-en:</b> to weaken, to sharpen, to lengthen</li>
+			</ul>
+			<div style="height:14px" aria-hidden="true"></div>
+			<big><b>Невозможно понять</b></big>, почему "simpl<b><u>ify</u></b>" но "modern<b><u>ize</u></b>". Это данность, которую нужно принять и выучить.
+		</ul>
+	</ul>
+
+	<hr>
+
+	<h3>Образование существительных: лотерея из десятков суффиксов</h3>
+	<div style="height:8px" aria-hidden="true"></div>
+	<ul>
+		<big><b>Ситуация с существительными ещё хуже.</b></big> Десятки суффиксов конкурируют за одну и ту же функцию - образовать имя существительное от глагола или прилагательного. <b>Выбор нужного суффикса - это чистый произвол.</b>
+		<div style="height:22px" aria-hidden="true"></div>
+		<ul>
+			<li><big><b>От глаголов:</b></big></li>
+			<ul>
+				<li><b>-ment:</b> develop - development</li>
+				<li><b>-tion:</b> create - creation, inform - information</li>
+				<li><b>-ance/-ence:</b> accept - acceptance, depend - dependence</li>
+				<li><b>-al:</b> arrive - arrival, deny - denial</li>
+				<li><b>-ure:</b> fail - failure, please - pleasure</li>
+				<li><b>-age:</b> pack - package, leak - leakage</li>
+			</ul>
+			<div style="height:14px" aria-hidden="true"></div>
+			<li><big><b>От прилагательных:</b></big></li>
+			<ul>
+				<li><b>-ness:</b> happy - happiness, kind - kindness</li>
+				<li><b>-ity:</b> possible - possibility, pure - purity</li>
+				<li><b>-th:</b> true - truth, long - length</li>
+			</ul>
+			<div style="height:14px" aria-hidden="true"></div>
+			<big><b>Почему</b></big> "agree<b><u>ment</u></b>", но "crea<b><u>tion</u></b>"? Почему "high<b><u>ness</u></b>", но "pur<b><u>ity</u></b>"? <b>Правила нет.</b> Есть только бесконечный список слов, которые нужно <b>memorize.</b>
+		</ul>
+	</ul>
+
+	<hr>
+
+	<h3>Образование прилагательных: та же неразбериха</h3>
+	<div style="height:8px" aria-hidden="true"></div>
+	<ul>
+		<big><b>Та же картина хаоса</b></big> наблюдается и при образовании прилагательных. От одного и того же корня могут образоваться разные формы, а выбор суффикса снова непредсказуем.
+		<div style="height:22px" aria-hidden="true"></div>
+		<ul>
+			<li><big><b>От существительных:</b></big></li>
+			<ul>
+				<li><b>-ful:</b> care - careful, beauty - beautyful</li>
+				<li><b>-ous:</b> danger - dangerous, fame - famous</li>
+				<li><b>-al:</b> nature - natural, culture - cultural</li>
+				<li><b>-y:</b> cloud - cloudy, sun - sunny</li>
+				<li><b>-ic:</b> hero - heroic, base - basic</li>
+				<li><b>-ish:</b> child - childish, red - reddish</li>
+			</ul>
+			<div style="height:14px" aria-hidden="true"></div>
+			<li><big><b>От глаголов:</b></big></li>
+			<ul>
+				<li><b>-able / -ible:</b> comfort - comfortable, predict - predictable</li>
+				<li><b>-ive:</b> effect - effective, impress - impressive</li>
+				<li><b>-ent / -ant:</b> depend - dependent, resist - resistant</li>
+			</ul>
+			<div style="height:14px" aria-hidden="true"></div>
+			<big><b>Отсутствие системы налицо:</b></big> "care<b><u>ful</u></b>", но "danger<b><u>ous</u></b>"; "nation<b><u>al</u></b>", но "hero<b><u>ic</u></b>".
+		</ul>
+	</ul>
+
+	<hr>
+
+	<h3>Обратная проблема: один суффикс - много ролей</h3>
+	<div style="height:8px" aria-hidden="true"></div>
+	<ul>
+		<b><big>Абсурдность системы</big> достигает пика, если посмотреть на неё с другой стороны.</b> Один и тот же суффикс может использоваться для образования совершенно разных частей речи, что окончательно запутывает. Это доказывает, что суффиксы не закреплены за частями речи, а их "значение" - фикция. И как в таком случае человек должен понять, какая именно часть речи перед ним? Единственный выход - отказаться от поиска логики и целиком положиться на контекст и механическое запоминание, что является крахом любой системности.
+		<div style="height:22px" aria-hidden="true"></div>
+		<ul>
+			<li><big><b>-ing:</b></big></li>
+			<ul>
+				<li><b>Герундий:</b> Sleeping is good. (Сон - подлежащее)</li>
+				<li><b>Причастие:</b> The sleeping child is cute. (Спящий - определение)</li>
+				<li><b>Существительное:</b> a feeling (чувство), a building (здание)</li>
+			</ul>
+			<li><big><b>-al:</b></big></li>
+			<ul>
+				<li><b>Прилагательное:</b> natural (натуральный), cultural (культурный)</li>
+				<li><b>Существительное:</b> arrival (прибытие), approval (одобрение)</li>
+			</ul>
+			<li><big><b>-y:</b></big></li>
+			<ul>
+				<li><b>Прилагательное:</b> cloudy (облачный), messy (грязный)</li>
+				<li><b>Существительное:</b> difficulty (сложность), honesty (честность)</li>
+			</ul>
+			<li><big><b>-ate:</b></big></li>
+			<ul>
+				<li><b>Глагол:</b> to activate (активировать)</li>
+				<li><b>Прилагательное:</b> accurate (точный), desolate (заброшенный)</li>
+				<li><b>Существительное:</b> a candidate (кандидат), a consulate (консульство)</li>
+			</ul>
+			<li><big><b>-ly:</b></big></li>
+			<ul>
+				<li><b>Наречие:</b> quickly (быстро) - это правило.</li>
+				<li><b>Прилагательное:</b> friendly (дружелюбный), lovely (прелестный) - а это уже исключения из его собственной функции!</li>
+			</ul>
+		</ul>
+	</ul>
+
+	<hr>
+
+	<h3>Негативные префиксы: тотальный произвол</h3>
+	<div style="height:8px" aria-hidden="true"></div>
+	<ul>
+		<big><b>Если в других аспектах словообразования царит хаос, то в области негативных префиксов он достигает своей кульминации.</b></big>  Здесь нет ни правил, ни даже намёка на логику. Система предлагает целый набор префиксов (<b>un-, in-, im-, il-, ir-, dis-, non-</b>), выбор между которыми абсолютно произволен и обусловлен лишь случайными историческими причинами.
+		<div style="height:22px" aria-hidden="true"></div>
+		<ul>
+			<li><big><b>Полный хаос выбора:</b></big></li>
+			<ul>
+				<li><b>un-:</b> unhappy, unable, unpopular, unwise</li>
+				<li><b>in-:</b> inactive, inaccurate, intolerant</li>
+				<li><b>im-:</b> impossible, immoral, imperfect</li>
+				<li><b>il-:</b> illegal, illogical, illegitimate</li>
+				<li><b>ir-:</b> irregular, irresponsible, irreversible</li>
+				<li><b>dis-:</b> dishonest, disloyal, disagree, disappear</li>
+				<li><b>non-:</b> nonsense, nonstop, nonviolent, nonprofit</li>
+			</ul>
+		</ul>
+	</ul>
+
+	<hr>
+
+	<h3>Заключение: система, требующая пересмотра</h3>
+	<div style="height:8px" aria-hidden="true"></div>
+	<ul>
+		<big><b>Таким образом</b></big>, вся система английского словообразования представляет собой не инструмент, а исторический артефакт - нагромождение противоречащих друг другу архаичных моделей, лишённое внутренней логики и предсказуемости. Она не создавалась целенаправленно, а "выросла" стихийно. В результате мы имеем не эффективный механизм, а поле для бесконечной зубрёжки, где каждое новое слово с большой вероятностью оказывается новым исключением из несуществующего правила. Единственным "правилом" становится отсутствие всяких правил, а единственным методом обучения - тотальная муштра и запоминание, что является антиподом логического, инженерного подхода к языку.
+	</ul>
+
+	<hr>
+
+	<h2 id="chapter2">Решение</h2>
+	<ul>
+		<big><b>Начальной формой</b></big> слова является существительное/герундий, а все прочие части речи образуются от этого единого корня путем добавления стандартных суффиксов.
+	</ul>
+	<ul>
+		<big><b>Пример:</b></big> teach - учение/обучение, teaching - обучать, teachive - обучающий, teachly - обучающе, teachen - обучающийся, teached - обучаемый.
+	</ul>
+
+	<hr>
+
+	<h3>Образование частей речи</h3>
+	<div style="height:8px" aria-hidden="true"></div>
+	<ul>
+		<li><big><b>Существительное/герундий:</b></big></li>
+		<ul>
+			<li><big><b>Корень</b></big> - Существительное и герундий имеют одинаковую форму. Если корень изначально не был существительным/герундием, то теперь он им становится. <b>Пример:</b> light - свет.</li>
+		</ul>
+		<div style="height:14px" aria-hidden="true"></div>
+		<li><big><b>Глагол:</b></big></li>
+		<ul>
+			<li><big><b>-ing</b></big> - Глагол образуется добавлением суффикса <b>-ing</b> к корню. <b>Пример:</b> lighting - светить.<br><b>Важное примечание:</b> Инфинитив является единственной глагольной формой и используется для всех лиц и времен.</li>
+		</ul>
+		<div style="height:14px" aria-hidden="true"></div>
+		<li><big><b>Прилагательное:</b></big></li>
+		<ul>
+			<li><big><b>-ive</b></big> - Прилагательное образуется добавлением суффикса <b>-ive</b> к корню. <b>Пример:</b> lightive - светлый.</li>
+		</ul>
+		<div style="height:14px" aria-hidden="true"></div>
+		<li><big><b>Наречие:</b></big></li>
+		<ul>
+			<li><big><b>-ly</b></big> - Наречие образуется добавлением суффикса <b>-ly</b> к корню. <b>Пример:</b> lightly - светло.</li>
+		</ul>
+		<div style="height:14px" aria-hidden="true"></div>
+		<li><big><b>Причастие (активный залог):</b></big></li>
+		<ul>
+			<li><big><b>-en</b></big> - Причастие (активный залог) образуется добавлением суффикса <b>-en</b> к корню. <b>Пример:</b> lighten - светящий.</li>
+		</ul>
+		<div style="height:14px" aria-hidden="true"></div>
+		<li><big><b>Причастие (пассивный залог):</b></big></li>
+		<ul>
+			<li><big><b>-ed</b></big> - Причастие (пассивный залог) образуется добавлением суффикса -ed к корню. <b>Пример:</b> lighted - освещённый.</li>
+		</ul>
+		<div style="height:14px" aria-hidden="true"></div>
+	</ul>
+
+	<hr>
+
+	<h3 id="chapter3">Другие суффиксы и префиксы</h3>
+	<div style="height:8px" aria-hidden="true"></div>
+	<ul>
+		<li><big><b>Множественное число:</b></big></li>
+		<ul>
+			<li><big><b>-s/-es</b></big> - Все существительные образуют множественное число путём добавления суффикса <b>-s/-es</b> к корню. <b>Исключения упраздняются</b>.</li>
+		</ul>
+		<div style="height:14px" aria-hidden="true"></div>
+		<li><big><b>Образование антонимов:</b></big></li>
+		<ul>
+			<li><big><b>un-</b></big> Образует противоположное значение: happily (счастливо) - unhappily (несчастливо).</li>
+		</ul>
+		<div style="height:14px" aria-hidden="true"></div>
+		<li><big><b>"Тот, кто делает":</b></big></li>
+		<ul>
+			<li><big><b>-er</b></big> - Образования существительных со значением - "тот, кто делает": teach (учение) - teacher (учитель).</li>
+		</ul>
+		<div style="height:14px" aria-hidden="true"></div>
+		<li><big><b>Предметы, инструменты:</b></big></li>
+		<ul>
+			<li><big><b>-or</b></big> - Образования существительных со значением - предметы, инструменты и прочие устройства: Computor (компьютер), reactor (реактор).</li>
+		</ul>
+		<div style="height:14px" aria-hidden="true"></div>
+		<li><big><b>Степени сравнения:</b></big></li>
+		<ul>
+			<li><big><b>more, most, less, least</b></big> - Степени сравнения образуются только с помощью слов <b>"more"</b> (больше), <b>"most"</b> (наибольшее) и <b>"less"</b> (меньше), <b>"least"</b> (наименьшее), которые ставятся перед прилагательным.</li>
+		</ul>
+		<div style="height:14px" aria-hidden="true"></div>
+	</ul>
+
+	<hr>
+
+<div style="text-align: center;">
+	<a href="en_index.html" target="mainFrame" style="color: #5151ff;">Перейти к оглавлению</a>
+</div>
+
+	<hr>
+
+</body>
+</html>
