@@ -1,191 +1,191 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>Реформа артиклей в английском языке</title>
-  <link href="pic/favicon.png" rel="shortcut icon" type="image/x-icon" />
-  <style>
-    :root {
-      --lh-base: 1.2;
-      --lh-list: 1.3;
-      --li-v-margin: 0.4em;
-      --nested-indent: 40px;
-      --fontStack-monospace:
-        Arial,
-        Helvetica,
-        sans-serif,
-        "Monaspace Neon",
-        ui-monospace,
-        SFMono-Regular,
-        "SF Mono",
-        Menlo,
-        Consolas,
-        "Liberation Mono",
-        monospace !important;
-    }
+	<meta charset="UTF-8">
+	<title>Реформа артиклей в английском языке</title>
+	<link href="pic/favicon.png" rel="shortcut icon" type="image/x-icon" />
+	<style>
+		:root {
+			--lh-base: 1.2;
+			--lh-list: 1.3;
+			--li-v-margin: 0.4em;
+			--nested-indent: 40px;
+			--fontStack-monospace:
+				Arial,
+				Helvetica,
+				sans-serif,
+				"Monaspace Neon",
+				ui-monospace,
+				SFMono-Regular,
+				"SF Mono",
+				Menlo,
+				Consolas,
+				"Liberation Mono",
+				monospace !important;
+		}
 
-    html, body {
-      font-family: var(--fontStack-monospace);
-    }
+		html, body {
+			font-family: var(--fontStack-monospace);
+		}
 
-    html {
-      font-size: 24px;
-    }
+		html {
+			font-size: 24px;
+		}
 
-    body {
-      padding-left: 20px;       /* задаёт отступ слева */
-      margin: 20px;
-      line-height: var(--lh-base);
-      font-size: 1rem;
-      position: relative;
-    }
+		body {
+			padding-left: 20px;       /* задаёт отступ слева */
+			margin: 20px;
+			line-height: var(--lh-base);
+			font-size: 1rem;
+			position: relative;
+		}
 
-    #corner-link {
-      position: absolute;
-      top: 0px;
-      right: 20px;
-      font-size: 1rem;
-      text-decoration: none;
-      color: #5151ff;
-    }
-    #corner-link:hover  {
-      position: absolute;
-      top: 0px;
-      right: 20px;
-      font-size: 1rem;
-      text-decoration: none;
-      color: #5151ff;
-      text-decoration: underline; /* Добавлено подчеркивание при наведении */
-    }
+		#corner-link {
+			position: absolute;
+			top: 0px;
+			right: 20px;
+			font-size: 1rem;
+			text-decoration: none;
+			color: #5151ff;
+		}
+		#corner-link:hover  {
+			position: absolute;
+			top: 0px;
+			right: 20px;
+			font-size: 1rem;
+			text-decoration: none;
+			color: #5151ff;
+			text-decoration: underline; /* Добавлено подчеркивание при наведении */
+		}
 
-    h2 {
-      color: #000;
-      margin-top: 1.0em;
-      margin-bottom: 0.5em;
-      line-height: var(--lh-base);
-      font-size: 2.25rem;
-    }
+		h2 {
+			color: #000;
+			margin-top: 1.0em;
+			margin-bottom: 0.5em;
+			line-height: var(--lh-base);
+			font-size: 2.25rem;
+		}
 
-    h3 {
-      color: #2a5d84;
-      margin-top: 1.2em;
-      margin-bottom: 0.4em;
-      line-height: var(--lh-base);
-      font-size: 1.5rem;
-    }
+		h3 {
+			color: #2a5d84;
+			margin-top: 1.2em;
+			margin-bottom: 0.4em;
+			line-height: var(--lh-base);
+			font-size: 1.5rem;
+		}
 
-    p {
-      margin: 0.5em 0;
-      line-height: var(--lh-base);
-    }
+		p {
+			margin: 0.5em 0;
+			line-height: var(--lh-base);
+		}
 
-    ul {
-      margin: 0.5em 0 0.5em var(--nested-indent);
-      padding: 0 0 0 1em;
-      line-height: var(--lh-list);
-    }
+		ul {
+			margin: 0.5em 0 0.5em var(--nested-indent);
+			padding: 0 0 0 1em;
+			line-height: var(--lh-list);
+		}
 
-    ul ul {
-      margin: var(--li-v-margin) 0 var(--li-v-margin) var(--nested-indent);
-      padding: 0 0 0 1em;
-      line-height: var(--lh-list);
-    }
+		ul ul {
+			margin: var(--li-v-margin) 0 var(--li-v-margin) var(--nested-indent);
+			padding: 0 0 0 1em;
+			line-height: var(--lh-list);
+		}
 
-    li {
-      margin: var(--li-v-margin) 0;
-    }
+		li {
+			margin: var(--li-v-margin) 0;
+		}
 
-    /* Стили для ссылок */
-    a {
-      text-decoration: none;
-      color: #3131cf;
-    }
-    a:hover {
-      color: #3131cf;
-      text-decoration: underline; /* Добавлено подчеркивание при наведении */
-    }
+		/* Стили для ссылок */
+		a {
+			text-decoration: none;
+			color: #3131cf;
+		}
+		a:hover {
+			color: #3131cf;
+			text-decoration: underline; /* Добавлено подчеркивание при наведении */
+		}
 
-    hr {
-      margin: 2em 0;
-      border: none;
-      border-top: 1px solid #ccc;
-    }
+		hr {
+			margin: 2em 0;
+			border: none;
+			border-top: 1px solid #ccc;
+		}
 
-    /* Новые стили для выравнивания «Трех базовых времен» */
-    .times-list {
-      list-style: none;
-      padding: 0;
-      margin-left: var(--nested-indent);
-    }
-    .times-list li {
-      display: flex;
-      margin: var(--li-v-margin) 0;
-    }
-    .times-list .term {
-      width: 350px; /* фиксированная ширина для левой колонки */
-      flex-shrink: 0;
-    }
-    .times-list .def {
-      flex: 1;
-    }
-  </style>
+		/* Новые стили для выравнивания «Трех базовых времен» */
+		.times-list {
+			list-style: none;
+			padding: 0;
+			margin-left: var(--nested-indent);
+		}
+		.times-list li {
+			display: flex;
+			margin: var(--li-v-margin) 0;
+		}
+		.times-list .term {
+			width: 350px; /* фиксированная ширина для левой колонки */
+			flex-shrink: 0;
+		}
+		.times-list .def {
+			flex: 1;
+		}
+	</style>
 </head>
 <body>
 
-  <a id="corner-link" href="../index.html" target="_top"><b>На главную</b></a>
+	<a id="corner-link" href="../index.html" target="_top"><b>На главную</b></a>
 
-  <h2>Артикли</h2>
+	<h2>Артикли</h2>
 
-  <h3>Что не так с системой артиклей в английском языке?</h3>
-  <ul>
-    <li><big><b>Избыточность:</b></big> Часто дублируют информацию, уже явную из контекста.
-      <ul>
-        <li>Пример: "<b>I hope the rain stops soon.</b>" → "Надеюсь, дождь скоро прекратится."</li>
-      </ul>
-    </li>
-    <li><big><b>Ненадёжность:</b></big> Артикль не создаёт ясность, а паразитирует на ней. Если ясности нет - он бесполезен и только вызывает путаницу.
-      <ul>
-        <li>Пример: "<b>Where is the report? - Which one?</b>" → "Где отчёт? - Какой именно?"</li>
-      </ul>
-    </li>
-    <li><big><b>Иррациональность:</b></big> Их правильное использование требует заучивания исключений, а не применения логики.
-      <ul>
-        <li>Пример: "<b>go to school.</b>" -vs- "<b>go to the university.</b>" → "ходить в школу." -и- "ходить в университет."</li>
-      </ul>
-    </li>
-    <li><big><b>Необходимы лишь формально:</b></big> В устойчивых выражениях не несут самостоятельной смысловой нагрузки.
-      <ul>
-        <li>Пример: "<b>in the end</b>" → "в конце"</li>
-      </ul>
-    </li>
-  </ul>
+	<h3>Что не так с системой артиклей в английском языке?</h3>
+	<ul>
+		<li><big><b>Избыточность:</b></big> Часто дублируют информацию, уже явную из контекста.
+			<ul>
+				<li>Пример: "<b>I hope the rain stops soon.</b>" → "Надеюсь, дождь скоро прекратится."</li>
+			</ul>
+		</li>
+		<li><big><b>Ненадёжность:</b></big> Артикль не создаёт ясность, а паразитирует на ней. Если ясности нет - он бесполезен и только вызывает путаницу.
+			<ul>
+				<li>Пример: "<b>Where is the report? - Which one?</b>" → "Где отчёт? - Какой именно?"</li>
+			</ul>
+		</li>
+		<li><big><b>Иррациональность:</b></big> Их правильное использование требует заучивания исключений, а не применения логики.
+			<ul>
+				<li>Пример: "<b>go to school.</b>" -vs- "<b>go to the university.</b>" → "ходить в школу." -и- "ходить в университет."</li>
+			</ul>
+		</li>
+		<li><big><b>Необходимы лишь формально:</b></big> В устойчивых выражениях не несут самостоятельной смысловой нагрузки.
+			<ul>
+				<li>Пример: "<b>in the end</b>" → "в конце"</li>
+			</ul>
+		</li>
+	</ul>
 
-  <hr>
+	<hr>
 
-  <h3>Решение:</h3>
-  <ul>
-    <li><big><b>Полная отмена</b></big> грамматической категории артиклей: (<b>a / an / the</b>).
-    </li>
-    <li><big><b>Использовать:</b></big>
-      <ul>
-        <li><big><b>Контекст:</b></big> "I saw movie. Movie was good." → "Я видел фильм. Фильм был хорош."</li>
-      </ul>
-      <ul>
-        <li><big><b>Указательные местоимения:</b></big> "I saw movie. <b>That</b> movie was good." → "Я видел фильм. <b>Этот</b> фильм был хорош."</li>
-      </ul>
-      <ul>
-        <li><big><b>Точные формулировки:</b></big> "I can't find the charger." - "I can't find charger <b>for laptop.</b>" → "Я не могу найти зарядку <b>для ноутбука.</b>"</li>
-      </ul>
-    </li>
-  </ul>
+	<h3>Решение:</h3>
+	<ul>
+		<li><big><b>Полная отмена</b></big> грамматической категории артиклей: (<b>a / an / the</b>).
+		</li>
+		<li><big><b>Использовать:</b></big>
+			<ul>
+				<li><big><b>Контекст:</b></big> "I saw movie. Movie was good." → "Я видел фильм. Фильм был хорош."</li>
+			</ul>
+			<ul>
+				<li><big><b>Указательные местоимения:</b></big> "I saw movie. <b>That</b> movie was good." → "Я видел фильм. <b>Этот</b> фильм был хорош."</li>
+			</ul>
+			<ul>
+				<li><big><b>Точные формулировки:</b></big> "I can't find the charger." - "I can't find charger <b>for laptop.</b>" → "Я не могу найти зарядку <b>для ноутбука.</b>"</li>
+			</ul>
+		</li>
+	</ul>
 
-  <hr>
+	<hr>
 
 <div style="text-align: center;">
-  <a href="en_index.html" target="mainFrame" style="color: #5151ff;">Перейти к оглавлению</a>
+	<a href="en_index.html" target="mainFrame" style="color: #5151ff;">Перейти к оглавлению</a>
 </div>
 
-  <hr>
+	<hr>
 
 </body>
 </html>

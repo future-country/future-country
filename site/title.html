@@ -1,156 +1,157 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>future-country</title>
-  <link href="pic/favicon.png" rel="shortcut icon" type="image/x-icon" />
-  <style>
-    :root {
-      --lh-base: 1.2;
-      --lh-list: 1.3;
-      --li-v-margin: 0.4em;
-      --nested-indent: 40px;
-      --fontStack-monospace:
-        Arial,
-        Helvetica,
-        sans-serif,
-        "Monaspace Neon",
-        ui-monospace,
-        SFMono-Regular,
-        "SF Mono",
-        Menlo,
-        Consolas,
-        "Liberation Mono",
-        monospace !important;
-    }
+	<meta charset="UTF-8">
+	<title>future-country</title>
+	<link href="pic/favicon.png" rel="shortcut icon" type="image/x-icon" />
+	<style>
+		:root {
+			--lh-base: 1.2;
+			--lh-list: 1.3;
+			--li-v-margin: 0.4em;
+			--nested-indent: 40px;
+			--fontStack-monospace:
+				Arial,
+				Helvetica,
+				sans-serif,
+				"Monaspace Neon",
+				ui-monospace,
+				SFMono-Regular,
+				"SF Mono",
+				Menlo,
+				Consolas,
+				"Liberation Mono",
+				monospace !important;
+		}
 
-    html, body {
-      font-family: var(--fontStack-monospace);
-    }
+		html, body {
+			font-family: var(--fontStack-monospace);
+		}
 
-    html {
-      font-size: 24px;
-    }
+		html {
+			font-size: 24px;
+		}
 
-    body {
-      padding-left: 20px;       /* задаёт отступ слева */
-      margin: 20px;
-      line-height: var(--lh-base);
-      font-size: 1rem;
-      position: relative;
-    }
+		body {
+			padding-left: 20px;       /* задаёт отступ слева */
+			margin: 20px;
+			line-height: var(--lh-base);
+			font-size: 1rem;
+			position: relative;
+		}
 
-    #corner-link {
-      position: absolute;
-      top: 0px;
-      right: 20px;
-      font-size: 1rem;
-      text-decoration: none;
-      color: #5151ff;
-    }
-    #corner-link:hover  {
-      position: absolute;
-      top: 0px;
-      right: 20px;
-      font-size: 1rem;
-      text-decoration: none;
-      color: #5151ff;
-      text-decoration: underline; /* Добавлено подчеркивание при наведении */
-    }
+		#corner-link {
+			position: absolute;
+			top: 0px;
+			right: 20px;
+			font-size: 1rem;
+			text-decoration: none;
+			color: #5151ff;
+		}
+		#corner-link:hover  {
+			position: absolute;
+			top: 0px;
+			right: 20px;
+			font-size: 1rem;
+			text-decoration: none;
+			color: #5151ff;
+			text-decoration: underline; /* Добавлено подчеркивание при наведении */
+		}
 
-    h2 {
-      color: #000;
-      margin-top: 1.0em;
-      margin-bottom: 0.5em;
-      line-height: var(--lh-base);
-      font-size: 2.25rem;
-    }
+		h2 {
+			color: #000;
+			margin-top: 1.0em;
+			margin-bottom: 0.5em;
+			line-height: var(--lh-base);
+			font-size: 2.25rem;
+		}
 
-    h3 {
-      color: #2a5d84;
-      margin-top: 1.2em;
-      margin-bottom: 0.4em;
-      line-height: var(--lh-base);
-      font-size: 1.5rem;
-    }
+		h3 {
+			color: #2a5d84;
+			margin-top: 1.2em;
+			margin-bottom: 0.4em;
+			line-height: var(--lh-base);
+			font-size: 1.5rem;
+		}
 
-    p {
-      margin: 0.5em 0;
-      line-height: var(--lh-base);
-    }
+		p {
+			margin: 0.5em 0;
+			line-height: var(--lh-base);
+		}
 
-    ul {
-      margin: 0.5em 0 0.5em var(--nested-indent);
-      padding: 0 0 0 1em;
-      line-height: var(--lh-list);
-    }
+		ul {
+			margin: 0.5em 0 0.5em var(--nested-indent);
+			padding: 0 0 0 1em;
+			line-height: var(--lh-list);
+		}
 
-    ul ul {
-      margin: var(--li-v-margin) 0 var(--li-v-margin) var(--nested-indent);
-      padding: 0 0 0 1em;
-      line-height: var(--lh-list);
-    }
+		ul ul {
+			margin: var(--li-v-margin) 0 var(--li-v-margin) var(--nested-indent);
+			padding: 0 0 0 1em;
+			line-height: var(--lh-list);
+		}
 
-    li {
-      margin: var(--li-v-margin) 0;
-    }
+		li {
+			margin: var(--li-v-margin) 0;
+		}
 
-    /* Стили для ссылок */
-    a {
-      text-decoration: none;
-      color: #3131cf;
-    }
-    a:hover {
-      color: #3131cf;
-      text-decoration: underline; /* Добавлено подчеркивание при наведении */
-    }
+		/* Стили для ссылок */
+		a {
+			text-decoration: none;
+			color: #3131cf;
+		}
+		a:hover {
+			color: #3131cf;
+			text-decoration: underline; /* Добавлено подчеркивание при наведении */
+		}
 
-    hr {
-      margin: 2em 0;
-      border: none;
-      border-top: 1px solid #ccc;
-    }
+		hr {
+			margin: 2em 0;
+			border: none;
+			border-top: 1px solid #ccc;
+		}
 
-    /* Новые стили для выравнивания «Трех базовых времен» */
-    .times-list {
-      list-style: none;
-      padding: 0;
-      margin-left: var(--nested-indent);
-    }
-    .times-list li {
-      display: flex;
-      margin: var(--li-v-margin) 0;
-    }
-    .times-list .term {
-      width: 350px; /* фиксированная ширина для левой колонки */
-      flex-shrink: 0;
-    }
-    .times-list .def {
-      flex: 1;
-    }
-  </style>
+		/* Новые стили для выравнивания «Трех базовых времен» */
+		.times-list {
+			list-style: none;
+			padding: 0;
+			margin-left: var(--nested-indent);
+		}
+		.times-list li {
+			display: flex;
+			margin: var(--li-v-margin) 0;
+		}
+		.times-list .term {
+			width: 350px; /* фиксированная ширина для левой колонки */
+			flex-shrink: 0;
+		}
+		.times-list .def {
+			flex: 1;
+		}
+	</style>
 </head>
 <body>
 
-  <a id="corner-link" href="../index.html" target="_top"><b>На главную</b></a>
+	<a id="corner-link" href="../index.html" target="_top"><b>На главную</b></a>
 
 
-  <div style="text-align:center;">
-    <h2>future-country</h2>
+	<div style="text-align:center;">
 	<div style="height:30px" aria-hidden="true"></div>
-    <img src="pic/cc0.png" alt="">
+		<h2>future-country</h2>
+	<div style="height:30px" aria-hidden="true"></div>
+		<img src="pic/cc0.png" alt="">
 	<div style="height:50px" aria-hidden="true"></div>
-    <p><big><b>Всё что создано человечеством, принадлежит человечеству.</big></b></p>
-  </div>
+		<p><big><b>Всё, что создано человечеством, принадлежит человечеству.</big></b></p>
+	</div>
 
 <table>
-  <tr>
-    <td height="700"></td>
-  </tr>
+	<tr>
+		<td height="700"></td>
+	</tr>
 </table>
 
-  <hr>
-  <hr>
+	<hr>
+	<hr>
 
 </body>
 </html>

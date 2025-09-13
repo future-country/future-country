@@ -1,170 +1,170 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>Реформа английского языка</title>
-  <link href="pic/favicon.png" rel="shortcut icon" type="image/x-icon" />
-  <style>
-    :root {
-      --lh-base: 1.2;
-      --lh-list: 1.3;
-      --li-v-margin: 0.4em;
-      --nested-indent: 40px;
-      --fontStack-monospace:
-        Arial,
-        Helvetica,
-        sans-serif,
-        "Monaspace Neon",
-        ui-monospace,
-        SFMono-Regular,
-        "SF Mono",
-        Menlo,
-        Consolas,
-        "Liberation Mono",
-        monospace !important;
-    }
+	<meta charset="UTF-8">
+	<title>Реформа английского языка</title>
+	<link href="pic/favicon.png" rel="shortcut icon" type="image/x-icon" />
+	<style>
+		:root {
+			--lh-base: 1.2;
+			--lh-list: 1.3;
+			--li-v-margin: 0.4em;
+			--nested-indent: 40px;
+			--fontStack-monospace:
+				Arial,
+				Helvetica,
+				sans-serif,
+				"Monaspace Neon",
+				ui-monospace,
+				SFMono-Regular,
+				"SF Mono",
+				Menlo,
+				Consolas,
+				"Liberation Mono",
+				monospace !important;
+		}
 
-    html, body {
-      font-family: var(--fontStack-monospace);
-    }
+		html, body {
+			font-family: var(--fontStack-monospace);
+		}
 
-    html {
-      font-size: 24px;
-    }
+		html {
+			font-size: 24px;
+		}
 
-    body {
-      padding-left: 20px;       /* задаёт отступ слева */
-      margin: 20px;
-      line-height: var(--lh-base);
-      font-size: 1rem;
-      position: relative;
-    }
+		body {
+			padding-left: 20px;       /* задаёт отступ слева */
+			margin: 20px;
+			line-height: var(--lh-base);
+			font-size: 1rem;
+			position: relative;
+		}
 
-    #corner-link {
-      position: absolute;
-      top: 0px;
-      right: 20px;
-      font-size: 1rem;
-      text-decoration: none;
-      color: #5151ff;
-    }
-    #corner-link:hover  {
-      position: absolute;
-      top: 0px;
-      right: 20px;
-      font-size: 1rem;
-      text-decoration: none;
-      color: #5151ff;
-      text-decoration: underline; /* Добавлено подчеркивание при наведении */
-    }
+		#corner-link {
+			position: absolute;
+			top: 0px;
+			right: 20px;
+			font-size: 1rem;
+			text-decoration: none;
+			color: #5151ff;
+		}
+		#corner-link:hover  {
+			position: absolute;
+			top: 0px;
+			right: 20px;
+			font-size: 1rem;
+			text-decoration: none;
+			color: #5151ff;
+			text-decoration: underline; /* Добавлено подчеркивание при наведении */
+		}
 
-    h2 {
-      color: #000;
-      margin-top: 1.0em;
-      margin-bottom: 0.5em;
-      line-height: var(--lh-base);
-      font-size: 2.25rem;
-    }
+		h2 {
+			color: #000;
+			margin-top: 1.0em;
+			margin-bottom: 0.5em;
+			line-height: var(--lh-base);
+			font-size: 2.25rem;
+		}
 
-    h3 {
-      color: #2a5d84;
-      margin-top: 1.2em;
-      margin-bottom: 0.4em;
-      line-height: var(--lh-base);
-      font-size: 1.5rem;
-    }
+		h3 {
+			color: #2a5d84;
+			margin-top: 1.2em;
+			margin-bottom: 0.4em;
+			line-height: var(--lh-base);
+			font-size: 1.5rem;
+		}
 
-    p {
-      margin: 0.5em 0;
-      line-height: var(--lh-base);
-    }
+		p {
+			margin: 0.5em 0;
+			line-height: var(--lh-base);
+		}
 
-    ul {
-      margin: 0.5em 0 0.5em var(--nested-indent);
-      padding: 0 0 0 1em;
-      line-height: var(--lh-list);
-    }
+		ul {
+			margin: 0.5em 0 0.5em var(--nested-indent);
+			padding: 0 0 0 1em;
+			line-height: var(--lh-list);
+		}
 
-    ul ul {
-      margin: var(--li-v-margin) 0 var(--li-v-margin) var(--nested-indent);
-      padding: 0 0 0 1em;
-      line-height: var(--lh-list);
-    }
+		ul ul {
+			margin: var(--li-v-margin) 0 var(--li-v-margin) var(--nested-indent);
+			padding: 0 0 0 1em;
+			line-height: var(--lh-list);
+		}
 
-    li {
-      margin: var(--li-v-margin) 0;
-    }
+		li {
+			margin: var(--li-v-margin) 0;
+		}
 
-    /* Стили для ссылок */
-    a {
-      text-decoration: none;
-      color: #3131cf;
-    }
-    a:hover {
-      color: #3131cf;
-      text-decoration: underline; /* Добавлено подчеркивание при наведении */
-    }
+		/* Стили для ссылок */
+		a {
+			text-decoration: none;
+			color: #3131cf;
+		}
+		a:hover {
+			color: #3131cf;
+			text-decoration: underline; /* Добавлено подчеркивание при наведении */
+		}
 
-    hr {
-      margin: 2em 0;
-      border: none;
-      border-top: 1px solid #ccc;
-    }
+		hr {
+			margin: 2em 0;
+			border: none;
+			border-top: 1px solid #ccc;
+		}
 
-    /* Новые стили для выравнивания «Трех базовых времен» */
-    .times-list {
-      list-style: none;
-      padding: 0;
-      margin-left: var(--nested-indent);
-    }
-    .times-list li {
-      display: flex;
-      margin: var(--li-v-margin) 0;
-    }
-    .times-list .term {
-      width: 350px; /* фиксированная ширина для левой колонки */
-      flex-shrink: 0;
-    }
-    .times-list .def {
-      flex: 1;
-    }
-  </style>
+		/* Новые стили для выравнивания «Трех базовых времен» */
+		.times-list {
+			list-style: none;
+			padding: 0;
+			margin-left: var(--nested-indent);
+		}
+		.times-list li {
+			display: flex;
+			margin: var(--li-v-margin) 0;
+		}
+		.times-list .term {
+			width: 350px; /* фиксированная ширина для левой колонки */
+			flex-shrink: 0;
+		}
+		.times-list .def {
+			flex: 1;
+		}
+	</style>
 </head>
 <body>
 
-  <a id="corner-link" href="../index.html" target="_top"><b>На главную</b></a>
+	<a id="corner-link" href="../index.html" target="_top"><b>На главную</b></a>
 
-  <h2>Реформа английского языка</h2>
+	<h2>Реформа английского языка</h2>
 
-  <h3>Какова главная цель реформы?</h3>
-  <ul>
-    <li>Язык это прежде всего <b>инструмент</b> для передачи смысла. А <b>инструмент</b> должен быть <b>эффективным</b>, и следовательно <b>логичным</b> и <b>простым</b>.<br>Все кто хочет <a href="https://github.com/future-country/future-country/discussions/1" target="_top"><b>поучаствовать</b></a> в работе над реформой или просто ознакомиться с результатами этой работы - <br><b>Добро пожаловать</b>.</li>
-  </ul>
+	<h3>Какова главная цель реформы?</h3>
+	<ul>
+		<li>Язык это прежде всего <b>инструмент</b> для передачи смысла. А <b>инструмент</b> должен быть <b>эффективным</b>, и следовательно <b>логичным</b> и <b>простым</b>.<br>Все кто хочет <a href="https://github.com/future-country/future-country/discussions/1" target="_top"><b>поучаствовать</b></a> в работе над реформой или просто ознакомиться с результатами этой работы - <br><b>Добро пожаловать</b>.</li>
+	</ul>
 
-  <h3>Внедрение изменений: Приоритеты и этапы.</h3>
-  <ul>
-    <li>Любая языковая реформа - это сложный и многоступенчатый процесс, требующий взвешенного подхода. Представленный проект не является догмой, требующей немедленного и тотального воплощения. Его элементы обладают разной степень сложности внедрения. Некоторые изменения, в частности те, что устраняют очевидные противоречия и упрощают рутинные правила, могут быть приняты практически безболезненно и начать использоваться немедленно. Другие, более глубокие преобразования, затрагивающие устоявшиеся орфографические и грамматические нормы, безусловно, потребуют периода адаптации и постепенного внедрения. Данное предложение призвано стать основой для обсуждения о поэтапном обновлении английского языка.</li>
-  </ul>
+	<h3>Внедрение изменений: Приоритеты и этапы.</h3>
+	<ul>
+		<li>Любая языковая реформа - это сложный и многоступенчатый процесс, требующий взвешенного подхода. Представленный проект не является догмой, требующей немедленного и тотального воплощения. Его элементы обладают разной степень сложности внедрения. Некоторые изменения, в частности те, что устраняют очевидные противоречия и упрощают рутинные правила, могут быть приняты практически безболезненно и начать использоваться немедленно. Другие, более глубокие преобразования, затрагивающие устоявшиеся орфографические и грамматические нормы, безусловно, потребуют периода адаптации и постепенного внедрения. Данное предложение призвано стать основой для обсуждения о поэтапном обновлении английского языка.</li>
+	</ul>
 
-  <h3>Разделы реформы:</h3>
-  <ul>
-    <li><a href="en_tenses.html" target="mainFrame"><b>Реформа английских времён.</b></a></li>
-  </ul>
-  <ul>
-    <li><a href="en_word_formation.html" target="mainFrame"><b>Словообразование.</b></a></li>
-  </ul>
-  <ul>
-    <li><a href="en_articles.html" target="mainFrame"><b>Артикли.</b></a></li>
-  </ul>
+	<h3>Разделы реформы:</h3>
+	<ul>
+		<li><a href="en_tenses.html" target="mainFrame"><b>Реформа английских времён.</b></a></li>
+	</ul>
+	<ul>
+		<li><a href="en_word_formation.html" target="mainFrame"><b>Словообразование.</b></a></li>
+	</ul>
+	<ul>
+		<li><a href="en_articles.html" target="mainFrame"><b>Артикли.</b></a></li>
+	</ul>
 
 <table>
-  <tr>
-    <td height="700"></td>
-  </tr>
+	<tr>
+		<td height="700"></td>
+	</tr>
 </table>
 
-  <hr>
-  <hr>
+	<hr>
+	<hr>
 
 </body>
 </html>
