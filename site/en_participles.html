@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Реформа английских времён</title>
+	<link href="pic/favicon.png" rel="shortcut icon" type="image/x-icon" />
+	<style>
+		:root {
+			--lh-base: 1.2;
+			--lh-list: 1.3;
+			--li-v-margin: 0.4em;
+			--nested-indent: 40px;
+			--fontStack-monospace:
+				Arial,
+				Helvetica,
+				sans-serif,
+				"Monaspace Neon",
+				ui-monospace,
+				SFMono-Regular,
+				"SF Mono",
+				Menlo,
+				Consolas,
+				"Liberation Mono",
+				monospace !important;
+		}
+
+		html, body {
+			font-family: var(--fontStack-monospace);
+		}
+
+		html {
+			font-size: 24px;
+		}
+
+		body {
+			padding-left: 20px;       /* задаёт отступ слева */
+			margin: 20px;
+			line-height: var(--lh-base);
+			font-size: 1rem;
+			position: relative;
+		}
+
+		#corner-link {
+			position: absolute;
+			top: 0px;
+			right: 20px;
+			font-size: 1rem;
+			text-decoration: none;
+			color: #5151ff;
+		}
+		#corner-link:hover  {
+			position: absolute;
+			top: 0px;
+			right: 20px;
+			font-size: 1rem;
+			text-decoration: none;
+			color: #5151ff;
+			text-decoration: underline; /* Добавлено подчеркивание при наведении */
+		}
+
+		h2 {
+			color: #000;
+			margin-top: 1.0em;
+			margin-bottom: 0.5em;
+			line-height: var(--lh-base);
+			font-size: 2.25rem;
+		}
+
+		h3 {
+			color: #2a5d84;
+			margin-top: 1.2em;
+			margin-bottom: 0.4em;
+			line-height: var(--lh-base);
+			font-size: 1.5rem;
+		}
+
+		p {
+			margin: 0.5em 0;
+			line-height: var(--lh-base);
+		}
+
+		ul {
+			margin: 0.5em 0 0.5em var(--nested-indent);
+			padding: 0 0 0 1em;
+			line-height: var(--lh-list);
+		}
+
+		ul ul {
+			margin: var(--li-v-margin) 0 var(--li-v-margin) var(--nested-indent);
+			padding: 0 0 0 1em;
+			line-height: var(--lh-list);
+		}
+
+		li {
+			margin: var(--li-v-margin) 0;
+		}
+
+		/* Стили для ссылок */
+		a {
+			text-decoration: none;
+			color: #3131cf;
+		}
+		a:hover {
+			color: #3131cf;
+			text-decoration: underline; /* Добавлено подчеркивание при наведении */
+		}
+
+		hr {
+			margin: 2em 0;
+			border: none;
+			border-top: 1px solid #ccc;
+		}
+
+		/* Новые стили для выравнивания «Трех базовых времен» */
+		.times-list {
+			list-style: none;
+			padding: 0;
+			margin-left: var(--nested-indent);
+		}
+		.times-list li {
+			display: flex;
+			margin: var(--li-v-margin) 0;
+		}
+		.times-list .term {
+			width: 350px; /* фиксированная ширина для левой колонки */
+			flex-shrink: 0;
+		}
+		.times-list .def {
+			flex: 1;
+		}
+	</style>
+</head>
+<body>
+
+	<a id="corner-link" href="../index.html" target="_top"><b>На главную</b></a>
+
+	<h2>Использование причастий</h2>
+	<ul>
+		<li><big><b>Причастия сохраняются</b></big> в реформе только там, где они выполняют роль <b>определений</b> или <b>описания состояний</b>. Все сложные конструкции (причастные обороты) заменяются на более простые.</li>
+	</ul>
+
+	<hr>
+
+	<h3>Причастие как определение<br><small>Attributive Participle</small></h3>
+	<div style="height:8px" aria-hidden="true"></div>
+	<ul>
+		<b>Причастия (активный залог) <big>-en</big></b> - Действительные причастия:
+		<div style="height:8px" aria-hidden="true"></div>
+		<ul>
+			<li><b>Runen cat</b> - "Бегущий кот".</li>
+			<li><b>Singen bird</b> - "Поющая птица".</li>
+			<div style="height:8px" aria-hidden="true"></div>
+		</ul>
+	</ul>
+	<ul>
+		<b>Причастия (пассивный залог) <big>-ed</big></b> - Страдательные причастия:
+		<div style="height:8px" aria-hidden="true"></div>
+		<ul>
+			<li><b>Broked window</b> - "Разбитое окно".</li>
+			<li><b>Writed letter</b> - "Написанное письмо".</li>
+			<div style="height:8px" aria-hidden="true"></div>
+		</ul>
+	</ul>
+	<ul>
+		<b>Причастия с наречиями:</b>
+		<div style="height:8px" aria-hidden="true"></div>
+		<ul>
+			<li><b>Quickly runen cat</b> - "Быстро бегущий кот".</li>
+			<li><b>Carefully writed letter</b> - "Тщательно написанное письмо".</li>
+			<div style="height:8px" aria-hidden="true"></div>
+		</ul>
+	</ul>
+
+	<hr>
+
+	<h3>Предикативное использование причастия (описание состояний)<br><small>Predicate Adjectives</small></h3>
+	<div style="height:8px" aria-hidden="true"></div>
+	<ul>
+		<ul>
+			<li><b>Cake seems baked</b> - "Торт кажется испечённым".</li>
+			<li><b>You surprised?</b> - "Ты удивлён?"</li>
+			<li><b>She embarrassed!</b> - "Она смущена!"</li>
+			<div style="height:8px" aria-hidden="true"></div>
+		</ul>
+	</ul>
+
+	<hr>
+
+	<h2>Конструкции, подлежащие замене</h2>
+
+	<h3>Причастные обороты с обстоятельственным значением<br><small>Adverbial Participle Clauses</small></h3>
+	<div style="height:8px" aria-hidden="true"></div>
+	<ul>
+		<b><big>Сопутствующее действие</big></b>
+		<div style="height:8px" aria-hidden="true"></div>
+		<ul>
+			<li><b>Пример:</b></li>
+			<ul>
+				<li><b>Was speaken with friends, she laughing.</b> - Разговаривая с друзьями, она смеялась.</li>
+			</ul>
+			<div style="height:8px" aria-hidden="true"></div>
+			<li><b>Упрощение:</b></li>
+			<ul>
+				<li><b>Союз "и" + глаголы в одном времени:</b></li>
+				<li><b>She was speaking with friends and laughing.</b> - Она разговаривала с друзьями и смеялась.</li>
+			</ul>
+			<div style="height:8px" aria-hidden="true"></div>
+			<li><b>Почему работает:</b></li>
+			<ul>
+				<li>Союз <b>and</b> связывает два равноправных действия, устраняя необходимость в обстоятельственных причастных оборотах.</li>
+			</ul>
+		</ul>
+		<div style="height:44px" aria-hidden="true"></div>
+
+		<b><big>Причина</big></b>
+		<div style="height:8px" aria-hidden="true"></div>
+		<ul>
+			<li><b>Пример:</b></li>
+			<ul>
+				<li><b>Was knowen answer, she was raising her hand.</b> - Зная ответ, она подняла руку.</li>
+			</ul>
+			<div style="height:8px" aria-hidden="true"></div>
+			<li><b>Упрощение:</b></li>
+			<ul>
+				<li><b>She was knowing answer and raising (her) hand.</b> - Она знала ответ и подняла руку.</li>
+			</ul>
+		</ul>
+		<div style="height:44px" aria-hidden="true"></div>
+
+		<b><big>Уступка</big></b>
+		<div style="height:8px" aria-hidden="true"></div>
+		<ul>
+			<li><b>Пример:</b></li>
+			<ul>
+				<li><b>Was feelen tire, she finishing marathon.</b> - Чувствуя усталость, она закончила марафон.</li>
+			</ul>
+			<div style="height:8px" aria-hidden="true"></div>
+			<li><b>Упрощение:</b></li>
+			<ul>
+				<li><b>She was feeling tire and (she) finishing marathon.</b> - Она чуствовала усталость, и закончила марафон.</li>
+			</ul>
+		</ul>
+		<div style="height:8px" aria-hidden="true"></div>
+	</ul>
+
+	<hr>
+
+	<h3>Причастия совершённого вида (действие перед другим)<br><small>Perfect Participles</small></h3>
+	<div style="height:8px" aria-hidden="true"></div>
+	<ul>
+		<li><b>Пример:</b></li>
+		<ul>
+			<li><b>Was have finished work, he going home.</b> - Закончив работу, он пошёл домой.</li>
+		</ul>
+		<div style="height:8px" aria-hidden="true"></div>
+		<li><b>Упрощение:</b></li>
+		<ul>
+			<li><b>Союз "и" + глаголы в хронологическом порядке:</b></li>
+			<li><b>He was have finishing work and going home.</b> - Он закончил работу и пошёл домой.</li>
+		</ul>
+		<div style="height:8px" aria-hidden="true"></div>
+	</ul>
+
+	<hr>
+
+	<h3>Причастные обороты, выражающие условие (условие)<br><small>Participial Phrases Expressing Condition</small></h3>
+	<div style="height:8px" aria-hidden="true"></div>
+	<ul>
+		<li><b>Пример:</b></li>
+		<ul>
+			<li><b>Will knowen answer, you can passing exam.</b> - Зная ответ, ты можешь сдать экзамен.</li>
+		</ul>
+		<div style="height:8px" aria-hidden="true"></div>
+		<li><b>Упрощение:</b></li>
+		<ul>
+			<li><b>Условный союз "если" + глагол:</b></li>
+			<li><b>If you knowing answer, you will can passing exam.</b> - Если ты знаешь ответ, ты можешь сдать экзамен.</li>
+			<li><b>If you will knowing answer, you can passing exam.</b> - Если ты будешь знать ответ, ты можешь сдать экзамен.</li>
+		</ul>
+		<div style="height:8px" aria-hidden="true"></div>
+		<li><b>Почему работает:</b></li>
+		<ul>
+			<li><b>Условные конструкции с if</b> привычны и не требуют причастий.</li>
+		</ul>
+		<div style="height:8px" aria-hidden="true"></div>
+	</ul>
+
+	<hr>
+
+	<h3>Причастные обороты (определения)<br><small>Participial Modifiers</small></h3>
+	<div style="height:8px" aria-hidden="true"></div>
+	<ul>
+		<li><b>Пример:</b></li>
+		<ul>
+			<li><b>Cake was baked by Mary</b> - Торт, испечённый Мэри.</li>
+			<li><b>Window was broked by wind</b> - "Окно, разбитое ветром".</li>
+		</ul>
+		<div style="height:8px" aria-hidden="true"></div>
+		<li><b>Упрощение:</b></li>
+		<ul>
+			<li><b>Относительное предложение с "который":</b></li>
+			<li><b>Cake which Mary was baking.</b> - Торт, который испекла Мэри.</li>
+			<li><b>Window which wind was broking.</b> - "Окно, которое разбил ветер".</li>
+		</ul>
+		<div style="height:8px" aria-hidden="true"></div>
+		<li><b>Почему работает:</b></li>
+		<ul>
+			<li><b>Относительные предложения с which</b> понятны и не требуют пассивных причастий.</li>
+		</ul>
+		<div style="height:8px" aria-hidden="true"></div>
+	</ul>
+
+	<hr>
+
+	<h3>Условные предложения с причастиями<br><small>Participles in Conditional Clauses</small></h3>
+	<div style="height:8px" aria-hidden="true"></div>
+	<ul>
+		<li><b>Пример:</b></li>
+		<ul>
+			<li><b>When will given chance, she taking it.</b> - Когда дадут шанс, она его использует.</li>
+		</ul>
+		<div style="height:8px" aria-hidden="true"></div>
+		<li><b>Упрощение:</b></li>
+		<ul>
+			<li><b>Союз "когда" + активный глагол:</b></li>
+			<li><b>When she will getting chance, she taking it.</b> - Когда она получит шанс, она его использует.</li>
+		</ul>
+		<div style="height:8px" aria-hidden="true"></div>
+	</ul>
+
+	<hr>
+
+	<h3>Научные/формальные тексты<br><small>Scientific/Formal Texts</small></h3>
+	<div style="height:8px" aria-hidden="true"></div>
+	<ul>
+		<li><b>Пример:</b></li>
+		<ul>
+			<li><b>Data, was collected in 2023, showing...</b> - Данные, собранные в 2023 году, показали...</li>
+		</ul>
+		<div style="height:8px" aria-hidden="true"></div>
+		<li><b>Упрощение:</b></li>
+		<ul>
+			<li><b>Data which (they) was collecting in 2023 showing...</b> - Данные, которые (они) собрали в 2023 году, показали...</li>
+		</ul>
+		<div style="height:8px" aria-hidden="true"></div>
+	</ul>
+
+	<hr>
+
+	<h2>Итоговые правила замены</h2>
+	<ul>
+		<li><b>Обстоятельственные причастные обороты</b> - союзы (and, if, when) + глаголы.</li>
+		<li><b>Причастные обороты</b> - относительные предложения (which) или прилагательные.</li>
+		<li><b>Причастия совершённого вида</b> - последовательность действий через and/then.</li>
+		<li><b>Пассивные конструкции</b> - активные глаголы.</li>
+		<div style="height:8px" aria-hidden="true"></div>
+	</ul>
+
+	<hr>
+
+<div style="text-align: center;">
+	<a href="en_index.html" target="mainFrame" style="color: #5151ff;">Перейти к оглавлению</a>
+</div>
+
+	<hr>
+
+</body>
+</html>
