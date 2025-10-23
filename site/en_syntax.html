@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Реформа синтаксиса</title>
+	<link href="pic/favicon.png" rel="shortcut icon" type="image/x-icon" />
+	<style>
+		:root {
+			--lh-base: 1.2;
+			--lh-list: 1.3;
+			--li-v-margin: 0.4em;
+			--nested-indent: 40px;
+			--fontStack-monospace:
+				Arial,
+				Helvetica,
+				sans-serif,
+				"Monaspace Neon",
+				ui-monospace,
+				SFMono-Regular,
+				"SF Mono",
+				Menlo,
+				Consolas,
+				"Liberation Mono",
+				monospace !important;
+		}
+
+		html, body {
+			font-family: var(--fontStack-monospace);
+		}
+
+		html {
+			font-size: 24px;
+		}
+
+		body {
+			padding-left: 20px;       /* задаёт отступ слева */
+			margin: 20px;
+			line-height: var(--lh-base);
+			font-size: 1rem;
+			position: relative;
+		}
+
+		#corner-link {
+			position: absolute;
+			top: 0px;
+			right: 20px;
+			font-size: 1rem;
+			text-decoration: none;
+			color: #5151ff;
+		}
+		#corner-link:hover  {
+			position: absolute;
+			top: 0px;
+			right: 20px;
+			font-size: 1rem;
+			text-decoration: none;
+			color: #5151ff;
+			text-decoration: underline; /* Добавлено подчеркивание при наведении */
+		}
+
+		h2 {
+			color: #000;
+			margin-top: 1.0em;
+			margin-bottom: 0.5em;
+			line-height: var(--lh-base);
+			font-size: 2.25rem;
+		}
+
+		h3 {
+			color: #2a5d84;
+			margin-top: 1.2em;
+			margin-bottom: 0.4em;
+			line-height: var(--lh-base);
+			font-size: 1.5rem;
+		}
+
+		p {
+			margin: 0.5em 0;
+			line-height: var(--lh-base);
+		}
+
+		ul {
+			margin: 0.5em 0 0.5em var(--nested-indent);
+			padding: 0 0 0 1em;
+			line-height: var(--lh-list);
+		}
+
+		ul ul {
+			margin: var(--li-v-margin) 0 var(--li-v-margin) var(--nested-indent);
+			padding: 0 0 0 1em;
+			line-height: var(--lh-list);
+		}
+
+		li {
+			margin: var(--li-v-margin) 0;
+		}
+
+		/* Стили для ссылок */
+		a {
+			text-decoration: none;
+			color: #3131cf;
+		}
+		a:hover {
+			color: #3131cf;
+			text-decoration: underline; /* Добавлено подчеркивание при наведении */
+		}
+
+		hr {
+			margin: 2em 0;
+			border: none;
+			border-top: 1px solid #ccc;
+		}
+
+		/* Новые стили для выравнивания «Трех базовых времен» */
+		.times-list {
+			list-style: none;
+			padding: 0;
+			margin-left: var(--nested-indent);
+		}
+		.times-list li {
+			display: flex;
+			margin: var(--li-v-margin) 0;
+		}
+		.times-list .term {
+			width: 350px; /* фиксированная ширина для левой колонки */
+			flex-shrink: 0;
+		}
+		.times-list .def {
+			flex: 1;
+		}
+	</style>
+</head>
+<body>
+
+	<a id="corner-link" href="../index.html" target="_top"><b>На главную</b></a>
+
+	<h2>Синтаксис</h2>
+
+	<h3>Построение утвердительных предложений</h3>
+	<div style="height:8px" aria-hidden="true"></div>
+	<ul>
+		<b><big>Стандартный порядок слов:</big></b> <b>(S)</b> Подлежащее + <b>(V)</b> Сказуемое + <b>(O)</b> Дополнение.
+		<div style="height:8px" aria-hidden="true"></div>
+		<ul>
+			<li>Присутствие всех трех элементов <b>не является обязательным</b>, но их относительный порядок - <b>фиксирован</b>.</li>
+			<div style="height:8px" aria-hidden="true"></div>
+		</ul>
+	</ul>
+
+	<hr>
+
+	<h3>Построение вопросительных предложений</h3>
+	<div style="height:8px" aria-hidden="true"></div>
+	<ul>
+		<b><big>Для построения вопросительных предложений</big></b> используется стандартный порядок слов с добавлением <b>вначале предложения</b> вопросительного слова или маркера вопроса.
+		<div style="height:8px" aria-hidden="true"></div>
+		<ul>
+			<li>[<b>Маркер вопроса</b> или <b>вопросительное слово</b>] + [<b>Стандартный порядок слов</b> (SVO)]</li>
+		</ul>
+		<div style="height:44px" aria-hidden="true"></div>
+
+		<b><big>do</big> - маркер вопроса</b>
+		<div style="height:8px" aria-hidden="true"></div>
+		<ul>
+			<li><b>Do you liking apples?</b> - Ты любишь яблоки?</li>
+			<li><b>Do he was going?</b> - Он ушёл?</li>
+		</ul>
+		<div style="height:44px" aria-hidden="true"></div>
+
+		<b><big>Вопросительные слова</big></b> - Who, What, Where, When, Why, How, Which, Whose
+		<div style="height:8px" aria-hidden="true"></div>
+		<ul>
+			<li><b>What you seing?</b> - Что ты видишь?</li>
+			<li><b>Where she living?</b> - Где она живёт?</li>
+		</ul>
+		<div style="height:8px" aria-hidden="true"></div>
+	</ul>
+
+	<hr>
+
+	<h3>Построение отрицаний</h3>
+	<div style="height:8px" aria-hidden="true"></div>
+	<ul>
+		<b><big>[not] + [глагол]</big></b>
+		<div style="height:8px" aria-hidden="true"></div>
+		<ul>
+			<li><b>I not knowing.</b> - Я не знаю.</li>
+			<li><b>He not diging.</b> - Он не копает.</li>
+		</ul>
+		<div style="height:8px" aria-hidden="true"></div>
+	</ul>
+
+	<hr>
+
+	<h3>Полный порядок следования маркеров в предложении</h3>
+	<div style="height:8px" aria-hidden="true"></div>
+	<ul>
+		<big>[<b>Маркер времени</b>] + [<b>Модальный глагол</b>] + <b>not</b> + [<b>Маркер состояния</b>] + [<b>Глагол]</b></big>
+		<div style="height:8px" aria-hidden="true"></div>
+	</ul>
+
+	<hr>
+
+	<h3>Порядок следования прилагательных</h3>
+	<div style="height:8px" aria-hidden="true"></div>
+	<ul>
+		<big><b>Порядок следования прилагательных</b></big> перед существительным, <b>определяется значимостью</b> для говорящего.
+		<div style="height:8px" aria-hidden="true"></div>
+	</ul>
+	<ul>
+		<big><b>Порядок следования прилагательных может быть произвольным</b></big>, если для говорящего значимость прилагательных не имеет значения.
+		<div style="height:8px" aria-hidden="true"></div>
+	</ul>
+
+	<hr>
+
+	<h3>Служебное слово is</h3>
+	<div style="height:8px" aria-hidden="true"></div>
+	<ul>
+		<b><big>Назначение:</big></b> Связывает подлежащее с его характеристикой, идентификатором или местоположением.
+		<div style="height:8px" aria-hidden="true"></div>
+		<ul>
+			<li><b>ВОЖНО!</b> - Не является формой глагола <b>be</b>. Классифицируется просто как <b>служебное слово</b> для связывания.</li>
+		</ul>
+		<div style="height:44px" aria-hidden="true"></div>
+		<b><big>Правило использования:</big></b> Служебное слово <b>is может быть опущено</b>, если связь между подлежащим и его описанием очевидна из контекста.
+		<div style="height:8px" aria-hidden="true"></div>
+		<ul>
+			<li><b>Пример:</b> He (is) teacher. - Он учитель.</li>
+		</ul>
+		<div style="height:8px" aria-hidden="true"></div>
+	</ul>
+
+	<hr>
+
+	<h3>Реформа сослагательного наклонения</h3>
+	<div style="height:8px" aria-hidden="true"></div>
+	<ul>
+		<ul>
+			<li><b><big>Суть проблемы:</big></b>
+				<ul>
+					<li><b>Классическое сослагательное наклонение</b> использует архаичные формы глаголов (<b>be, were, had</b>) и сложные, неочевидные правила, которые противоречат принципу прямой связи между грамматической формой и реальным смыслом.</li>
+					<li><b>Непоследовательность времен:</b> Классические правила согласования времён являются искусственными и нелогичными. Они требуют сдвига грамматического времени в придаточном предложении, даже когда реальное время действия относится к настоящему или будущему. Это создаёт путаницу, искажает смысл и противоречит принципу ясности коммуникации.</li>
+				</ul>
+			</li>
+			<div style="height:8px" aria-hidden="true"></div>
+		</ul>
+		<ul>
+			<li><b><big>Решение:</big></b>
+				<ul>
+					<li><b>Систематизация грамматики</b>, перераспределение функций между двумя существующими частицами - <b>so that</b> и <b>would</b> - и наделение их новыми, универсальными ролями.</li>
+					<li><b>Последовательность времен:</b> В условных предложениях грамматическое время в обеих частях предложения (условии и результате) должно полностью соответствовать реальному времени действия, о котором идёт речь.</li>
+				</ul>
+			<div style="height:8px" aria-hidden="true"></div>
+			</li>
+		</ul>
+		<div style="height:24px" aria-hidden="true"></div>
+		<b><big>so that</big> - универсальное использование частицы</b>.
+		<br>Сфера применения конструкции <b>so that</b> расширяется. Теперь она также используется для введения придаточных предложений, которые выражают требование, предложение или желание.
+		<div style="height:8px" aria-hidden="true"></div>
+		<ul>
+			<li><b>Требование:</b> It important <b>so that</b> he being here on time. - Важно, <b>чтобы</b> он был здесь вовремя.</li>
+			<li><b>Предложение:</b> I suggesting <b>so that</b> she will consulting doctor. - Я предлагаю, <b>чтобы</b> она проконсультировалась с врачом.</li>
+			<li><b>Желание:</b> I wishing <b>so that</b> my family will having a better life. - Я хочу, <b>чтобы</b> у моей семьи была лучшая жизнь.</li>
+		</ul>
+		<div style="height:44px" aria-hidden="true"></div>
+		<b><big>would</big></b> - Универсальная частица-маркер гипотетичности.
+		<br><b>Изменяется классификация would</b>. Теперь это не модальный глагол, а универсальная частица "<b>бы</b>". А так же расширяется функция <b>would</b>. Она становится единственным маркером нереальности и гипотетичности, заменяя все архаичные формы глаголов в условных предложениях.
+		<br><b>Частица would</b> занимает позицию непосредственно после подлежащего.
+		<div style="height:8px" aria-hidden="true"></div>
+		<ul>
+			<li><b>Условные предложения:</b> If I <b>would</b> was being you, I <b>would</b> agreeing. - Если <b>бы</b> я был тобой, я <b>бы</b> согласился.</li>
+			<li><b>Гипотетические ситуации:</b> I <b>would</b> will wanting traveling to Mars. - Я <b>бы</b> хотел полететь на Марс (в будущем).</li>
+			<li><b>Нереальные сравнения:</b> She talking as if she <b>would</b> being an expert. - Она говорит так, как будто <b>бы</b> она эксперт.</li>
+		</ul>
+		<div style="height:44px" aria-hidden="true"></div>
+		<b><big>Итог</big></b>
+		<div style="height:8px" aria-hidden="true"></div>
+		<ul>
+			<li><b>Данная система</b> упрощает грамматику, устраняя необходимость запоминания исключений. Использование <b>so that</b> для сложноподчиненных предложений и <b>would</b> для маркировки ирреальности создает последовательную и предсказуемую структуру.</li>
+		</ul>
+		<div style="height:8px" aria-hidden="true"></div>
+	</ul>
+
+	<hr>
+
+	<h3>Реформа косвенной речи</h3>
+	<div style="height:8px" aria-hidden="true"></div>
+	<ul>
+		<li><b><big>Суть проблемы:</big></b> Классические правила согласования времён (Sequence of Tenses) являются искусственными и нелогичными. Они требуют сдвига грамматического времени в придаточном предложении, даже когда реальное время действия относится к настоящему или будущему. Это создаёт путаницу, искажает смысл и противоречит принципу ясности коммуникации.
+		</li>
+		<div style="height:8px" aria-hidden="true"></div>
+		<li><b><big>Решение:</big></b> Отмена архаичного правила согласования времён. Введение прямого принципа: грамматическое время в придаточном предложении должно полностью соответствовать реальному времени действия, о котором идёт речь.
+		</li>
+		<div style="height:8px" aria-hidden="true"></div>
+	</ul>
+
+	<hr>
+
+<div style="text-align: center;">
+	<a href="en_index.html" target="mainFrame" style="color: #5151ff;">Перейти к оглавлению</a>
+</div>
+
+	<hr>
+
+</body>
+</html>
