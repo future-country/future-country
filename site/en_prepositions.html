@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Реформа английских предлогов</title>
+	<link href="pic/favicon.png" rel="shortcut icon" type="image/x-icon" />
+	<style>
+		:root {
+			--lh-base: 1.2;
+			--lh-list: 1.3;
+			--li-v-margin: 0.4em;
+			--nested-indent: 40px;
+			--fontStack-monospace:
+				Arial,
+				Helvetica,
+				sans-serif,
+				"Monaspace Neon",
+				ui-monospace,
+				SFMono-Regular,
+				"SF Mono",
+				Menlo,
+				Consolas,
+				"Liberation Mono",
+				monospace !important;
+		}
+
+		html, body {
+			font-family: var(--fontStack-monospace);
+		}
+
+		html {
+			font-size: 24px;
+		}
+
+		body {
+			padding-left: 20px;       /* задаёт отступ слева */
+			margin: 20px;
+			line-height: var(--lh-base);
+			font-size: 1rem;
+			position: relative;
+		}
+
+		#corner-link {
+			position: absolute;
+			top: 0px;
+			right: 20px;
+			font-size: 1rem;
+			text-decoration: none;
+			color: #5151ff;
+		}
+		#corner-link:hover  {
+			position: absolute;
+			top: 0px;
+			right: 20px;
+			font-size: 1rem;
+			text-decoration: none;
+			color: #5151ff;
+			text-decoration: underline; /* Добавлено подчеркивание при наведении */
+		}
+
+		h2 {
+			color: #000;
+			margin-top: 1.0em;
+			margin-bottom: 0.5em;
+			line-height: var(--lh-base);
+			font-size: 2.25rem;
+		}
+
+		h3 {
+			color: #2a5d84;
+			margin-top: 1.2em;
+			margin-bottom: 0.4em;
+			line-height: var(--lh-base);
+			font-size: 1.5rem;
+		}
+
+		p {
+			margin: 0.5em 0;
+			line-height: var(--lh-base);
+		}
+
+		ul {
+			margin: 0.5em 0 0.5em var(--nested-indent);
+			padding: 0 0 0 1em;
+			line-height: var(--lh-list);
+		}
+
+		ul ul {
+			margin: var(--li-v-margin) 0 var(--li-v-margin) var(--nested-indent);
+			padding: 0 0 0 1em;
+			line-height: var(--lh-list);
+		}
+
+		li {
+			margin: var(--li-v-margin) 0;
+		}
+
+		/* Стили для ссылок */
+		a {
+			text-decoration: none;
+			color: #3131cf;
+		}
+		a:hover {
+			color: #3131cf;
+			text-decoration: underline; /* Добавлено подчеркивание при наведении */
+		}
+
+		hr {
+			margin: 2em 0;
+			border: none;
+			border-top: 1px solid #ccc;
+		}
+
+		/* Новые стили для выравнивания «Трех базовых времен» */
+		.times-list {
+			list-style: none;
+			padding: 0;
+			margin-left: var(--nested-indent);
+		}
+		.times-list li {
+			display: flex;
+			margin: var(--li-v-margin) 0;
+		}
+		.times-list .term {
+			width: 350px; /* фиксированная ширина для левой колонки */
+			flex-shrink: 0;
+		}
+		.times-list .def {
+			flex: 1;
+		}
+	</style>
+</head>
+<body>
+
+	<a id="corner-link" href="../index.html" target="_top"><b>На главную</b></a>
+
+	<h2>Оглавление</h2>
+	<ul>
+		<b>
+		<li><a href="#chapter1">Деление на предлоги и союзы</a></li>
+		<li><a href="#chapter2">Предлоги времени</a></li>
+		<li><a href="#chapter3">Предлоги пространства</a></li>
+		<li><a href="#chapter4">Предлоги отношений</a></li>
+		</b>
+	</ul>
+
+	<hr>
+
+	<h2 id="chapter1">Деление на предлоги и союзы</h2>
+
+	<h3>Почему традиционное деление упраздняется</h3>
+	<div style="height:8px" aria-hidden="true"></div>
+	<ul>
+		<li><big><b>Деление на «предлоги» и «союзы» не нужно ни изучающим язык, ни лингвистам.</b></big> Оно основано не на свойствах самих слов, а на типе соседнего элемента, что создаёт путаницу и не имеет практической ценности. Для точного описания грамматики достаточно модели Универсальных Реляторов. </li>
+		<li><big><b>Их задача</b></big> - выражать отношения между элементами высказывания. Смысл этих отношений остается неизменным, независимо от того, стоит после релятора отдельное слово или целое предложение.</li>
+		<div style="height:14px" aria-hidden="true"></div>
+		<li><big><b>Примеры:</b></big></li>
+		<ul>
+			<li><big><b>before:</b></big> (до, перед)</li>
+			<ul>
+				<li><b>Релятор + слово:</b> We must will meeting <b>before</b> noon. - Мы должны встретиться до полудня. (традиционный предлог)</li>
+				<li><b>Релятор + предложение:</b> We must will meeting <b>before</b> meet starting. - Мы должны встретиться до того, как встреча начнется. (традиционный союз)</li>
+			</ul>
+			<li><big><b>since:</b></big> (с, с тех пор как)</li>
+			<ul>
+				<li><b>Релятор + слово:</b> I being here <b>since</b> Monday. - Я здесь с понедельника. (традиционный предлог)</li>
+				<li><b>Релятор + предложение:</b> I being here <b>since</b> you lefting. - Я здесь с тех пор, как ты ушел. (традиционный союз)</li>
+			</ul>
+		</ul>
+		<div style="height:14px" aria-hidden="true"></div>
+	</ul>
+
+	<hr>
+
+	<h3>Обоснование</h3>
+	<div style="height:8px" aria-hidden="true"></div>
+	<ul>
+		<li><big><b>Единство формы.</b></big> Слова вроде before и since пишутся и произносятся одинаково. Это одно и то же слово, а не два разных.</li>
+		<li><big><b>Единство смысла.</b></big> Каждое такое слово передает один и тот же тип отношения между идеями, независимо от контекста.</li>
+		<div style="height:8px" aria-hidden="true"></div>
+		<ul>
+			<li><big><b>before</b></big> всегда означает "предшествование по времени".</li>
+			<li><big><b>since</b></big> всегда означает "начало временного отрезка".</li>
+		</ul>
+		<div style="height:14px" aria-hidden="true"></div>
+	</ul>
+
+	<hr>
+
+	<h3>Решение</h3>
+	<div style="height:8px" aria-hidden="true"></div>
+	<ul>
+		<li><big><b>Все слова, традиционно относимые к предлогам и союзам</b></big>, объединяются в единый класс - <b>Универсальных Реляторов.</b></li>
+		<li><big><b>Их задача</b></big> - выражать отношения между элементами высказывания. Смысл этих отношений остается неизменным, независимо от того, стоит после релятора отдельное слово или целое предложение.</li>
+		<div style="height:14px" aria-hidden="true"></div>
+	</ul>
+
+	<hr>
+
+	<h3>Сохранение термина "Предлог"</h3>
+	<div style="height:8px" aria-hidden="true"></div>
+	<ul>
+		<li><big><b>Для обозначения Универсальных Реляторов</b></big> будет использоваться термин - <b>ПРЕДЛОГ</b>, как наиболее знакомый и понятный широким массам.</li>
+		<li><big><b>Такое решение</b></big> сохраняет привычную терминологию, обеспечивая преемственность, и позволяет избежать введения новой сложной терминологии.</li>
+		<div style="height:14px" aria-hidden="true"></div>
+	</ul>
+
+	<hr>
+
+	<h2 id="chapter2">Предлоги времени</h2>
+
+	<h3>Используемые предлоги и примеры</h3>
+	<div style="height:8px" aria-hidden="true"></div>
+	<ul>
+		<li><big><b>AT:</b></big> Точка на оси времени</li>
+		<ul>
+			<li><b>Sun rising at six o'clock!</b> - Солнце встаёт в шесть часов!</li>
+			<li><b>She was borning at 1995!</b> - Она родилась в 1995!</li>
+			<li><b>We will have arriving at Monday!</b> - Мы приедем в понедельник!</li>
+		</ul>
+	<div style="height:22px" aria-hidden="true"></div>
+	</ul>
+
+	<ul>
+		<li><big><b>FROM:</b></big> Начало отсчёта</li>
+		<ul>
+			<li><b>I knowing her from 2010!</b> - Я знаю её с 2010!</li>
+			<li><b>Law working from January 1st!</b> - Закон действует с 1 января!</li>
+		</ul>
+	<div style="height:22px" aria-hidden="true"></div>
+	</ul>
+
+	<ul>
+		<li><big><b>TILL:</b></big> Граница окончания</li>
+		<ul>
+			<li><b>He was working till sunset!</b> - Он работал до заката!</li>
+			<li><b>Please, waiting till my return.</b> - Пожалуйста, жди моего возвращения.</li>
+		</ul>
+	<div style="height:22px" aria-hidden="true"></div>
+	</ul>
+
+	<ul>
+		<li><big><b>FROM ... TILL:</b></big> Замкнутый интервал</li>
+		<ul>
+			<li><b>She working from 8 AM till 4 PM!</b> - Она работает с 8:00 до 16:00!</li>
+			<li><b>They going to seaside every year from July till August.</b> - Они ездят на море каждый год с июля по август.</li>
+		</ul>
+	<div style="height:22px" aria-hidden="true"></div>
+	</ul>
+
+	<ul>
+		<li><big><b>BEFORE:</b></big> До</li>
+		<ul>
+			<li><b>Before making decision, he consulting with colleagues.</b> - Прежде чем принять решение, он посоветовался с коллегами.</li>
+			<li><b>He was checking settings before starting engine.</b> - Он проверил настройки перед запуском двигателя.</li>
+		</ul>
+	<div style="height:22px" aria-hidden="true"></div>
+	</ul>
+
+	<ul>
+		<li><big><b>AFTER:</b></big> После</li>
+		<ul>
+			<li><b>Calling me after you finishing your work.</b> - Позвони мне после того, как закончишь работу.</li>
+			<li><b>How about going to park after lunch?</b> - Как насчет пойти в парк после обеда?</li>
+		</ul>
+	<div style="height:22px" aria-hidden="true"></div>
+	</ul>
+
+	<ul>
+		<li><big><b>DURING:</b></big> В пределах срока</li>
+		<ul>
+			<li><b>He was paing during 30 days!</b> - Он оплатил в течение 30 дней!</li>
+			<li><b>You will seeing result during week!</b> - Ты увидишь результат в течение недели!</li>
+		</ul>
+	<div style="height:22px" aria-hidden="true"></div>
+	</ul>
+
+	<ul>
+		<li><big><b>ALL:</b></big> Весь период без перерыва</li>
+		<ul>
+			<li><b>They traveling all summer.</b> - Они путешествовали всё лето.</li>
+			<li><b>She crying all morning!</b> - Она плакала всё утро!</li>
+		</ul>
+	<div style="height:22px" aria-hidden="true"></div>
+	</ul>
+
+	<ul>
+		<li><big><b>AGO:</b></big> Назад</li>
+		<ul>
+			<li><b>He moving three years ago!</b> - Он переехал три года назад!</li>
+			<li><b>She finishing moment ago!</b> - Она закончила минуту назад!</li>
+		</ul>
+	<div style="height:22px" aria-hidden="true"></div>
+	</ul>
+
+	<ul>
+		<li><big><b>BETWEEN:</b></big> Промежуток между двумя точками</li>
+		<ul>
+			<li><b>House was building between 2010 and 2012.</b> - Дом был построен между 2010 и 2012 годом.</li>
+			<li><b>Shop not working between Christmas and New Year!</b> - Магазин не работает между Рождеством и Новым годом.</li>
+		</ul>
+	<div style="height:22px" aria-hidden="true"></div>
+	</ul>
+
+	<ul>
+		<li><big><b>WHEN:</b></big> При наступлении условия</li>
+		<ul>
+			<li><b>he smiling when seeing puppies!</b>S - Она улыбается при виде щенков!</li>
+			<li><b>When you finishing report, sending it to me immediately.</b> - Когда ты закончишь отчёт, сразу же отправь его мне.</li>
+		</ul>
+	<div style="height:22px" aria-hidden="true"></div>
+	</ul>
+
+	<h3>Ключевые изменения реформы</h3>
+	<div style="height:8px" aria-hidden="true"></div>
+	<ul>
+		<li><big><b>AT = любое время</b></big></li>
+		<ul>
+			<li><b>Ликвидировано:</b> in, on для времени.</li>
+		</ul>
+	<div style="height:22px" aria-hidden="true"></div>
+	</ul>
+
+	<ul>
+		<li><big><b>FROM...TILL начало + конец = интервал</b></big></li>
+		<ul>
+			<li><b>Ликвидировано:</b> to, through, until, since.</li>
+		</ul>
+	<div style="height:22px" aria-hidden="true"></div>
+	</ul>
+
+	<ul>
+		<li><big><b>DURING/ALL = длительность</b></big></li>
+		<ul>
+			<li><b>DURING</b> = внутри срока</li>
+			<li><b>ALL</b> = весь срок без перерыва</li>
+			<li><b>Ликвидировано:</b> for, since, within.</li>
+		</ul>
+	<div style="height:42px" aria-hidden="true"></div>
+	</ul>
+
+	<ul>
+		<big><b>ИТОГ:</b></big>
+		<ul>
+			<li><b>Ликвидировано:</b> in / on / since / by / for / within + все идиомы.</li>
+			<li><b>Результат: </b>10 предлогов - 0 исключений. Логика > привычки.</li>
+		</ul>
+	<div style="height:22px" aria-hidden="true"></div>
+	</ul>
+
+	<hr>
+
+	<h2 id="chapter3">Предлоги пространства</h2>
+
+	<h3>Используемые предлоги и примеры</h3>
+	<div style="height:8px" aria-hidden="true"></div>
+	<ul>
+		<li><big><b>AT:</b></big> Точка геолокации</li>
+		<ul>
+			<li><b>He standing at crossroads.</b> - Он стоит на перекрёстке.</li>
+			<li><b>We liveing at London.</b> - Мы живём в Лондоне.</li>
+			<li><b>We liveing at 221B Baker Street.</b> - Мы живём на Бейкер стрит 221b.</li>
+			<li><b>I waiting at bus stop!</b> - Я жду на остановке!</li>
+			<li><b>He working at library at weekends.</b> - Он работает в библиотеке по выходным.</li>
+			<li><b>We will being at beach all day.</b> - Мы будем на пляже весь день.</li>
+			<li><b>Kids playing at playground.</b> - Дети играют на детской площадке.</li>
+		</ul>
+	<div style="height:22px" aria-hidden="true"></div>
+	</ul>
+
+	<ul>
+		<li><big><b>TO:</b></big> Движение по направлению (к цели)</li>
+		<ul>
+			<li><b>He going to peak!</b> - Он идёт к вершине!</li>
+			<li><b>She have pointing antenna to satellite.</b> - Она направила антенну на спутник.</li>
+		</ul>
+	<div style="height:22px" aria-hidden="true"></div>
+	</ul>
+
+	<ul>
+		<li><big><b>IN:</b></big> Внутри</li>
+		<ul>
+			<li><b>Treasure in chest!</b> - Сокровище в сундуке!</li>
+			<li><b>She swiming in ocean!</b> - Она плавает в океане!</li>
+			<li><b>Dad in garage.</b> - Папа в гараже. (внутри гаража)</li>
+		</ul>
+	<div style="height:22px" aria-hidden="true"></div>
+	</ul>
+
+	<ul>
+		<li><big><b>ON:</b></big> На поверхности</li>
+		<ul>
+			<li><b>He placing statue on pedestal!</b> - Он поставил статую на постамент!</li>
+			<li><b>Cat sleeping on garage roof.</b> - Кот спит на крыше гаража.</li>
+		</ul>
+	<div style="height:22px" aria-hidden="true"></div>
+	</ul>
+
+	<ul>
+		<li><big><b>FROM:</b></big> Исходная точка</li>
+		<ul>
+			<li><b>He was escaping from maze!</b> - Он выбрался из лабиринта!</li>
+			<li><b>I was geting letter from my friend.</b> - Я получил письмо от друга.</li>
+		</ul>
+	<div style="height:22px" aria-hidden="true"></div>
+	</ul>
+
+	<ul>
+		<li><big><b>NEAR:</b></big> Вблизи</li>
+		<ul>
+			<li><b>Cat sleeping near fireplace.</b> - Кот спит возле камина.</li>
+			<li><b>Siting near me.</b> - Сядь рядом со мной.</li>
+			<li><b>She standing near window.</b> - Она стоит у окна.</li>
+			<li><b>He living near city center.</b> - Он живёт недалеко от центра города.</li>
+			<li><b>Keeping remote near TV.</b> - Держи пульт рядом с телевизором.</li>
+		</ul>
+	<div style="height:22px" aria-hidden="true"></div>
+	</ul>
+
+	<ul>
+		<li><big><b>PAST:</b></big> Движение мимо</li>
+		<ul>
+			<li><b>Sailing past the island!</b> - Проплыви мимо острова!</li>
+			<li><b>Comet was flying past Earth.</b> - Комета пролетела мимо Земли.</li>
+		</ul>
+	<div style="height:22px" aria-hidden="true"></div>
+	</ul>
+
+	<ul>
+		<li><big><b>OVER:</b></big> Выше</li>
+		<ul>
+			<li><b>Drone hovering over field.</b> - Дрон завис над полем.</li>
+			<li><b>Clouds (is) over mountains.</b> - Облака над горами.</li>
+			<li><b>Drawing canopy over bed!</b> - Нарисуй балдахин над кроватью!</li>
+		</ul>
+	<div style="height:22px" aria-hidden="true"></div>
+	</ul>
+
+	<ul>
+		<li><big><b>UNDER:</b></big> Ниже</li>
+		<ul>
+			<li><b>Cat (is) under bed.</b> - Кот под кроватью.</li>
+			<li><b>He hiding under blanket.</b> - Он спрятался под одеялом.</li>
+			<li><b>Boat (is) under bridge.</b> - Лодка под мостом.</li>
+		</ul>
+	<div style="height:22px" aria-hidden="true"></div>
+	</ul>
+
+	<ul>
+		<li><big><b>ACROSS:</b></big> Через / Сквозь / По</li>
+		<ul>
+			<li><b>We was walking across field.</b> - Мы шли через поле.</li>
+			<li><b>Tunnel runing across mountains.</b> - Туннель проходит через горы.</li>
+			<li><b>We was walking across forest (throughly).</b> - Мы прошли лес (насквозь).</li>
+		</ul>
+	<div style="height:22px" aria-hidden="true"></div>
+	</ul>
+
+	<ul>
+		<li><big><b>ALONG:</b></big> Вдоль чего-то</li>
+		<ul>
+			<li><b>Planting flowers along fence!</b> - Посади цветы вдоль забора!</li>
+			<li><b>We driving along coast.</b> - Мы ехали вдоль побережья.</li>
+		</ul>
+	<div style="height:22px" aria-hidden="true"></div>
+	</ul>
+
+	<ul>
+		<li><big><b>AROUND:</b></big> Вокруг</li>
+		<ul>
+			<li><b>They siting around fire.</b> - Они сидели вокруг костра.</li>
+			<li><b>Earth revolving around Sun.</b> - Земля вращается вокруг Солнца.</li>
+		</ul>
+	<div style="height:22px" aria-hidden="true"></div>
+	</ul>
+
+	<ul>
+		<li><big><b>BEHIND:</b></big> Сзади / Позади</li>
+		<ul>
+			<li><b>Parking car behind barn!</b> - Припаркуй телегу за сараем!</li>
+			<li><b>Sun disappearing behind hill.</b> - Солнце скрылось за холмом.</li>
+		</ul>
+	<div style="height:22px" aria-hidden="true"></div>
+	</ul>
+
+	<ul>
+		<li><big><b>IFO [ɪˈfɔː] (= in front of):</b></big> Спереди / Перед</li>
+		<ul>
+			<li><b>Guard standing ifo gate.</b> - Страж стоял перед воротами.</li>
+			<li><b>Placeing altar ifo temple!</b> - Поставь алтарь перед храмом!</li>
+			<li><b>Parking car ifo house!</b> - Припаркуй машину перед домом!</li>
+		</ul>
+	<div style="height:22px" aria-hidden="true"></div>
+	</ul>
+
+	<ul>
+		<li><big><b>AGAINST:</b></big> Упор / Против</li>
+		<ul>
+			<li><b>He leaning against door.</b> - Он прислонился к двери.</li>
+			<li><b>Placing ladder against wall!</b> - Приставь лестницу к стене!</li>
+		</ul>
+	<div style="height:22px" aria-hidden="true"></div>
+	</ul>
+
+	<ul>
+		<li><big><b>BETWEEN:</b></big> Между</li>
+		<ul>
+			<li><b>She siting between her parents.</b> - Она сидит между своими родителями.</li>
+			<li><b>He was dividing money between team members.</b> - Он разделил деньги между членами команды.</li>
+			<li><b>Treaty between three countries.</b> - Договор между тремя странами.</li>
+		</ul>
+	<div style="height:22px" aria-hidden="true"></div>
+	</ul>
+
+	<ul>
+		<li><big><b>OUTSIDE:</b></big> Вне / Снаружи</li>
+		<ul>
+			<li><b>Keeping generator outside house!</b> - Держи генератор вне дома!</li>
+			<li><b>Garden being outside city walls.</b> - Сад находится вне городских стен.</li>
+		</ul>
+	<div style="height:22px" aria-hidden="true"></div>
+	</ul>
+
+	<h3>Ключевые изменения реформы</h3>
+	<div style="height:8px" aria-hidden="true"></div>
+	<ul>
+		<li><big><b>УНИЧТОЖЕНИЕ ХАОСА</b></big></li>
+		<ul>
+			<li><b>AT</b> ЗАМЕНИЛ путаницу in/on/at для мест!</li>
+			<li><b>ACROSS</b> УНИЧТОЖИЛ путаницу across/through</li>
+			<li><b>BETWEEN</b> СТЁР различия between/among!</li>
+		</ul>
+	<div style="height:22px" aria-hidden="true"></div>
+	</ul>
+
+	<ul>
+		<li><big><b>ЧЁТКОСТЬ ЗНАЧЕНИЙ</b></big></li>
+		<ul>
+			<li><b>AT</b> = Координата/Объект-цель (ГДЕ? — Вот здесь объект!).</li>
+			<li><b>IN</b> = Строго ВНУТРИ объема (ГДЕ? — ВНУТРИ границ!).</li>
+			<li><b>ON</b> = Строго НА поверхности (ГДЕ? — В КОНТАКТЕ с поверхностью!).</li>
+			<li><b>OVER</b> = Строго ВЫШЕ (заменяет above!) (ГДЕ? — ВЫШЕ этого!).</li>
+			<li><b>ACROSS</b> = Преодоление/Покрытие препятствия (КУДА?/ГДЕ? — ЧЕРЕЗ ЭТО / ПОКРЫВАЯ ЭТО!).</li>
+			<li><b>IFO</b> = Строго СПЕРЕДИ (новое слово!) (ГДЕ? — ПРЯМО ПЕРЕД этим!).</li>
+		</ul>
+	<div style="height:22px" aria-hidden="true"></div>
+	</ul>
+
+	<ul>
+		<li><big><b>УСТРАНЕНИЕ ДУБЛЕЙ / ЗАПРЕТЫ</b></big></li>
+		<ul>
+			<li><b>ABOVE</b> - Поглощено OVER (ВЫШЕ).</li>
+			<li><b>AMONG</b> - Поглощено BETWEEN (МЕЖДУ).</li>
+			<li><b>IN FRONT OF</b> - Заменено на IFO.</li>
+			<li><b>ONTO/INTO</b> - Функции взяли TO + место или ON/IN + глагол движения.</li>
+			<li><b>UPON/BENEATH/BENEATH/TOWARDS и т.п.</b> - Удалены как избыточные (ON, UNDER, TO достаточно).</li>
+		</ul>
+	<div style="height:22px" aria-hidden="true"></div>
+	</ul>
+
+	<hr>
+
+	<h2 id="chapter4">Предлоги отношений</h2>
+
+	<h3>В работе...</h3>
+	<div style="height:8px" aria-hidden="true"></div>
+
+<div style="text-align: center;">
+	<a href="en_index.html" target="mainFrame" style="color: #5151ff;">Перейти к оглавлению</a>
+</div>
+
+	<hr>
+
+</body>
+</html>
